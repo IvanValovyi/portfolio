@@ -1,5 +1,5 @@
 <template>
     <div>
-        <p>Hello from new build !</p>
+        <p>Update from deploy.sh</p>
     </div>
 </template>
