@@ -4,7 +4,7 @@ git add .
 git commit -m 'Deploy'
 git push origin master
 
-npm run generate
+npm run build
 cd dist
 git init
 git add .
