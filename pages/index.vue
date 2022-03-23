@@ -1,5 +1,5 @@
 <template>
     <div>
-        <p>Hellofrom new build !</p>
+        <p>Fuck Russia</p>
     </div>
 </template>
