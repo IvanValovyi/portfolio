@@ -8,5 +8,7 @@ npm run generate
 cd dist
 git init
 git add .
-git commit 'Deploy'
-git push -f git@github.com:IvanValovyi/portfolio-site.git master:gh-pages
+git commit -m 'Deploy'
+git remote add origin https://github.com/IvanValovyi/portfolio-site.git
+git branch gh-pages
+git push origin gh-pages
