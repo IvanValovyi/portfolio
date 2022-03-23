@@ -9,7 +9,4 @@ cd dist
 git init
 git add .
 git commit 'Deploy'
-git branch -d gh-pages
-git branch gh-pages
-git remote add origin https://github.com/IvanValovyi/portfolio-site.git
-git push origin gh-pages
+git push -f git@github.com:IvanValovyi/portfolio-site.git master:gh-pages
