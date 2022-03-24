@@ -1,0 +1,59 @@
+@import './mixin'
+
+.mobile_menu
+    opacity: 0
+    position: absolute
+    width: 100%
+    height: 100vh
+    top: 0
+    left: 0
+    background: #292828
+    transition: 0.5s
+    @include flex(start, center, column)
+    .profile
+        @include flex(center, center, column)
+        background: none
+        margin-bottom: 20px
+        padding: 20px 0
+        color: white
+        p.position
+            color: #e2e2e2
+    nav
+        ul
+                @include flex(center, center, column)
+                li
+                    padding: 10px
+                    margin: 10px 0
+                    border-radius: 0
+                    position: relative
+                    a
+                        color: white
+                        background: none
+                        &::before
+                            content: ''
+                            position: absolute
+                            bottom: 0
+                            left: 0
+                            width: 100%
+                            height: 1px
+                            background: #e2e2e2
+    ul.other_links
+        width: 100%
+        height: max-content
+        position: absolute
+        bottom: 0
+        padding: 50px 0
+        border-top: 1px solid #e2e2e2
+        li
+            margin: 0 5px
+            padding: 0 5px
+            background: linear-gradient(180deg, #1e8a92 0%, #032d30 100%)
+            border: 1px solid white
+            &:nth-child(2)
+                margin: 0
+            a
+                color: white
+                min-height: 65px
+                padding: 2.5px 
+    &.anim
+        opacity: 1
