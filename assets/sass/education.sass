@@ -1,0 +1,47 @@
+@import './mixin'
+
+.education
+    background: #0F0E0E
+    color: white
+    position: relative
+    padding: 30px
+    @include flex(flex-start, center, column)
+    h2
+        margin-bottom: 30px
+    .lang
+        position: absolute
+        top: 30px
+        right: 30px
+        cursor: pointer
+        user-select: none
+        p
+            position: absolute
+            top: 0
+            right: 0
+            background: #0F0E0E
+            padding: 5px
+            padding-top: 7px
+            transition: 0.3s
+            &.active
+                z-index: 2
+                border: 1px solid white
+                padding: 5px
+                padding-top: 7px
+        &:hover
+            p.active
+                transform: translateX(-100%)
+                background: white
+                color: black
+    .text_blok
+        width: 100%
+        p:nth-child(2)
+            margin: 40px 0
+
+@media (max-width: 500px) 
+    .education 
+        .text_blok p:nth-child(2)
+            margin: 20px 0
+
+@media (max-width: 350px) 
+    .education 
+        padding: 30px 15px

@@ -1,0 +1,77 @@
+@import './mixin'
+
+.technologies
+    color: white
+    @include flex(flex-start, center, column)
+    background: #222222
+    padding: 30px 0
+    .all_tech_blok
+        @include flex(space-evenly, flex-start)
+        width: 100%
+        padding-top: 30px
+        .one_tech_blok
+            background: #100F0F
+            padding: 5px
+            @include flex(flex-start, flex-start, column)
+            width: 30%
+            &.Frontend h3::before
+                background: #165400
+            &.Backend h3::before
+                background: #6F0000
+            &.Other h3::before
+                background: #011F6D
+            h3
+                position: relative
+                left: -5px
+                top: -5px
+                width: calc( 100% - 35px )
+                padding: 10px 5px
+                padding-left: 40px
+                background: #000000
+                &::before
+                    content: ''
+                    position: absolute
+                    right: 10px
+                    top: 50%
+                    transform: translateY(-50%)
+                    width: 20px
+                    height: 20px
+                    border-radius: 100%
+                    border: 2px solid white
+            .tech_list
+                width: 100%
+                @include flex(flex-start, flex-start)
+                flex-wrap: wrap
+                .one_tech
+                    @include flex(flex-start, center)
+                    width: 50%
+                    margin: 10px 0
+                    span
+                        width: 30px
+                        height: 30px
+                        box-shadow: 0 0 1px 2px #ffffffb0
+                        margin-left: 15px
+                        margin-right: 10px
+                        border-radius: 3px
+
+@media ( max-width: 1024px )
+    .technologies .all_tech_blok
+        @include flex(flex-start, center, column)
+        .one_tech_blok
+            width: 65%
+            &:nth-child(2)
+                margin: 50px 0
+
+@media ( max-width: 700px )
+    .technologies .all_tech_blok
+        .one_tech_blok
+            width: 85%
+            &:nth-child(2)
+                margin: 40px 0
+
+@media ( max-width: 500px )
+    .technologies .all_tech_blok .one_tech_blok .tech_list .one_tech span
+        width: 25px
+        height: 25px
+        margin-left: 10px
+        margin-right: 7px

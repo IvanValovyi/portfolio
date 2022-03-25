@@ -32,9 +32,8 @@
             </li>
         </ul>
 
-        <button :class="['mobile_nav_btn', anim_btn_class]" @click="change_show_menu()">
-
-            <svg v-if="anim_btn_class.length == 1">
+        <button :class="['mobile_nav_btn', anim_menu_class]" @click="change_show_menu()">
+            <svg v-if="show_menu">
                 <use xlink:href='~/assets/images/sprite.svg#close'></use>
             </svg>
 
@@ -56,26 +55,36 @@ export default {
     },
     data(){
         return{
-            anim_btn_class:[],
-            anim_menu_class:''
+            show_menu:false,
+            anim_menu_class:[],
+            body:''
         }
     },
     methods:{
         change_show_menu(){
-            if (this.anim_menu_class=='') {
-                this.anim_menu_class='anim'
-                this.anim_btn_class=['anim', 'anim_btn']
+            if (this.anim_menu_class.length==0) {
+                this.anim_menu_class=['anim', 'anim_btn']
                 setTimeout(() => {
-                    this.anim_btn_class.pop()
+                    if (this.anim_menu_class.length==2) {
+                        this.show_menu = true
+                        this.body.classList.add('hidden')
+                        this.anim_menu_class.pop()
+                    }
                 }, 500)
             } else {
-                this.anim_menu_class=''
-                this.anim_btn_class=['anim_btn']
+                this.anim_menu_class=['anim_btn']
                 setTimeout(() => {
-                    this.anim_btn_class = []
+                    if (this.anim_menu_class.length==1) {
+                        this.show_menu = false
+                        this.body.classList.remove('hidden')
+                        this.anim_menu_class = []
+                    }
                 }, 500)
             }
         }
+    },
+    mounted(){
+        this.body = document.querySelector('body')
     }
 }
 </script>

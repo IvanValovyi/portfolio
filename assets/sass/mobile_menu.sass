@@ -3,10 +3,11 @@
 .mobile_menu
     opacity: 0
     position: absolute
+    z-index: 3
     width: 100%
     height: 100vh
     top: 0
-    left: 0
+    left: -100%
     background: #292828
     transition: 0.5s
     @include flex(start, center, column)
@@ -14,6 +15,7 @@
         @include flex(center, center, column)
         background: none
         margin-bottom: 20px
+        margin-left: 0
         padding: 20px 0
         color: white
         p.position
@@ -57,3 +59,6 @@
                 padding: 2.5px 
     &.anim
         opacity: 1
+        left: 0
+    &.none
+        display: none

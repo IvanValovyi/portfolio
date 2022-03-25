@@ -1,0 +1,39 @@
+@import './mixin'
+
+.contact
+    @include flex(flex-start, center, column)
+    background: #0F0E0E
+    color: white
+    padding-top: 30px
+    .contact_list
+        width: calc( 100% - 60px )
+        @include flex(space-evenly, center)
+        padding: 30px 0
+        .one_contact
+            @include flex(flex-start, center)
+            color: white
+            padding: 5px 15px
+            border: 1px solid white
+            transition: 0.3s
+            svg
+                width: 35px
+                height: 35px
+                fill: white
+                margin-right: 15px
+                transition: 0.3s
+            &:hover
+                background: white
+                color: black
+                svg
+                    fill: black
+
+@media ( max-width: 500px )
+    .contact .contact_list
+        width: 100%
+        padding: 30px 0px
+        .one_contact
+            padding: 5px
+            svg
+                width: 20px
+                height: 20px
+                margin-right: 10px
