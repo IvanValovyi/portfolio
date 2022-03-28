@@ -1,5 +1,6 @@
 set -e
 
+git init
 git add .
 git commit -m 'Deploy'
 git push -u origin master
