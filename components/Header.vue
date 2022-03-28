@@ -57,7 +57,7 @@ export default {
         return{
             show_menu:false,
             anim_menu_class:[],
-            body:''
+            body:'' 
         }
     },
     methods:{
