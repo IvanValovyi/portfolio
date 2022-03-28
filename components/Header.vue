@@ -11,13 +11,13 @@
         <nav class="desctop">
             <ul class="main_links">
                 <li>
-                    <nuxt-link to="/about">About</nuxt-link>
+                    <nuxt-link to="#">About</nuxt-link>
                 </li><li>
-                    <nuxt-link to="/about">Contacts</nuxt-link>
+                    <nuxt-link to="#">Contacts</nuxt-link>
                 </li><li>
-                    <nuxt-link to="/about">Skills</nuxt-link>
+                    <nuxt-link to="#">Skills</nuxt-link>
                 </li><li>
-                    <nuxt-link to="/about">Projects</nuxt-link>
+                    <nuxt-link to="#">Projects</nuxt-link>
                 </li>
             </ul>
         </nav>
