@@ -43,6 +43,6 @@ export default {
   build: {
   },
   router: {
-    base: '/portfolio-site/'
+    base: '/portfolio/'
   }
 }
