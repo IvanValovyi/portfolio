@@ -20,11 +20,13 @@
             right: 0
             background: #0F0E0E
             padding: 5px
+            width: 35px
             padding-top: 7px
             transition: 0.3s
+            @include flex(center, center)
             &.active
                 z-index: 2
-                border: 1px solid white
+                outline: 1px solid white
                 padding: 5px
                 padding-top: 7px
         &:hover
@@ -37,10 +39,16 @@
         p:nth-child(2)
             margin: 40px 0
 
+@media (max-width: 1024px) 
+    .education .lang p
+        width: 30px
+
 @media (max-width: 500px) 
     .education 
         .text_blok p:nth-child(2)
             margin: 20px 0
+        .lang p
+            width: 22px
 
 @media (max-width: 350px) 
     .education 

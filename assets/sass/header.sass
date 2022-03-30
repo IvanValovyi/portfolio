@@ -11,7 +11,9 @@ header
         grid-area: profile
         padding: 40px
         @include flex(center, center)
-        background: #E6E6E6
+        background: #222222
+        color: white
+        box-shadow: inset -10px -10px 15px -2px rgba(0,0,0,0.6)
         img
             width: 160px
             height: 160px
@@ -27,6 +29,11 @@ header
             color: black
             padding: 5px 10px
             border-radius: 5px
+            box-shadow: 0 0 2px 4px #aaaaaa00
+            transition: 0.3s
+            &:hover
+                box-shadow: 0 0 2px 4px #9e9e9e83
+                border-radius: 0
     ul
         width: 100%
         @include flex(space-evenly, flex-end)
@@ -35,7 +42,6 @@ header
             height: 100%
             li
                 flex: 1
-                padding: 0 5px
                 text-align: center
                 background: linear-gradient(180deg, #BDE4E7 0%, rgba(205, 236, 238, 0) 100%)
                 height: 100%
@@ -45,7 +51,49 @@ header
                     color: #1C1C1C
                     height: 100%
                     width: 100%
+                    position: relative
                     @include flex(center, center)
+                    transition: 0.5s
+                    p
+                        position: absolute
+                        z-index: 2
+                        width: 100%
+                        top: 50%
+                        left: 50%
+                        padding: 0
+                        transform: translate(-50%, -50%)
+                        background: #fcfcfc00
+                        transition: 0.5s
+                    .hover
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+                        z-index: 1
+                        background: black
+                        opacity: 0
+                        @include flex(center, flex-end)
+                        transition: 0.5s
+                        svg
+                            fill: white
+                            width: 50px
+                            height: 50px
+                            margin-bottom: 10px
+                            transform: rotateY(90deg)
+                            transition: 0.5s
+                    &:hover
+                        background: white
+                        p
+                            top: 0
+                            transform: translate(-50%, 0)
+                            padding: 5px 0
+                            
+                            background: white
+                        .hover
+                            opacity: 1
+                            svg
+                                transform: rotateY(0deg)
 
 @media ( max-width: 1700px )
     header .profile img
@@ -55,6 +103,11 @@ header
 @media ( max-width: 1250px )
     header
         grid: 'profile main_links' 'profile other_links' 'profile other_links' / 40% 60%
+
+@media ( max-width: 1150px )
+    header ul.other_links li a .hover svg
+        width: 35px 
+        height: 35px
 
 @media ( max-width: 1100px )
     header
@@ -67,14 +120,26 @@ header
             width: 120px
             height: 120px
 
+@media (max-width: 900px)
+    header ul.other_links li a 
+        p
+            padding: 5px
+            width: calc( 100% - 10px )
+        &:hover
+            p
+                padding: 5px
+        
+
 @media ( max-width: 800px )
     header
         @include flex(space-between, center)
-        background: #E6E6E6
+        background: #000000
         padding: 10px 0
         .profile
             padding: 0
             margin-left: 25px
+            background: #000000
+            box-shadow: none
             img
                 width: 90px
                 height: 90px
@@ -98,12 +163,10 @@ header
                 height: 30px
                 padding: 5px
                 transition: 1s
+                fill: white
             &.anim_btn
                 transform: rotateX(90deg) rotateY(90deg) rotateZ(180deg)
                 opacity: 0
-            &.anim
-                svg
-                    fill: white
 
 @media ( max-width: 500px )
     header

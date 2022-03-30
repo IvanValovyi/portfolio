@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="profile">
-            <img src="~/assets/images/my_photo.jpg" alt="Face">
+            <img src="~/assets/images/my_photo.png" alt="Face">
             <div class="info">
                 <h1 class="name">Ivan Valovyi</h1>
                 <p class="position">Frontend developer</p>
@@ -24,11 +24,32 @@
 
         <ul class="other_links desctop">
             <li>
-                <a href="#">Living examples of works</a>
+                <a href="#">
+                    <p>Living examples of works</p>
+                    <div class="hover">
+                        <svg>
+                            <use xlink:href='~/assets/images/sprite.svg#living_ex'></use>
+                        </svg>
+                    </div>
+                    </a>
             </li><li>
-                <a href="#">Order a website</a>
+                <a href="#">
+                    <p>Order a website</p>
+                    <div class="hover">
+                        <svg>
+                            <use xlink:href='~/assets/images/sprite.svg#order'></use>
+                        </svg>
+                    </div>
+                </a>
             </li><li>
-                <a href="#">Write me</a>
+                <a href="#">
+                    <p>Write me</p>
+                    <div class="hover">
+                        <svg>
+                            <use xlink:href='~/assets/images/sprite.svg#chat'></use>
+                        </svg>
+                    </div>
+                </a>
             </li>
         </ul>
 
