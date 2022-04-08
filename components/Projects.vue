@@ -36,12 +36,12 @@ export default {
                     technologies:['HTML', 'SASS', 'JS'],
                     link:'https://ivanvalovyi.github.io/kmk_test/'
                 },{
-                    name:'My Blog',
+                    name:'Jane Blog',
                     type:'Landing page',
-                    img:require('~/assets/images/my_blog.png'),
-                    technologies:['HTML', 'CSS', 'JS'],
+                    img:require('~/assets/images/jane_blog.png'),
+                    technologies:['HTML', 'SASS', 'JS'],
                     class:'reverse',
-                    link:'https://ivanvalovyi.github.io/my-blog/'
+                    link:'https://ivanvalovyi.github.io/jane_blog/'
                 },{
                     name:'Tour Cloud',
                     type:'Company site',
