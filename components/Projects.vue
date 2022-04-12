@@ -48,6 +48,13 @@ export default {
                     img:require('~/assets/images/tour_cloud.png'),
                     technologies:['HTML', 'SASS', 'JS'],
                     link:'https://ivanvalovyi.github.io/tour_cloud/home.html'
+                },{
+                    name:'Photo Aplication',
+                    type:'Landing Page',
+                    img:require('~/assets/images/photo_app.png'),
+                    technologies:['HTML', 'SASS', 'JS'],
+                    class:'reverse',
+                    link:'https://ivanvalovyi.github.io/photo_app'
                 }
             ]
         }
