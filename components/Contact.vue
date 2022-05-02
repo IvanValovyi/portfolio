@@ -2,7 +2,7 @@
     <div class="contact" id="contact">
         <h2 class="title">Contact</h2>
         <div class="contact_list">
-            <a href="t.me/@ivan_valovyi_37" class="one_contact">
+            <a href="https://t.me/ivan_valovyi_37" class="one_contact">
                 <svg>
                     <use xlink:href='~/assets/images/sprite.svg#telegram'></use>
                 </svg>
