@@ -1,5 +1,5 @@
 <template>
-    <div class="education">
+    <div class="education" id="education">
         <h2 class="title">Education</h2>
         <div class="text_blok">
             <p v-for="(el, i) in education_text" :key="i" class="common_text">{{el}}</p>

@@ -1,5 +1,5 @@
 <template>
-    <div class="contact">
+    <div class="contact" id="contact">
         <h2 class="title">Contact</h2>
         <div class="contact_list">
             <a href="#" class="one_contact">

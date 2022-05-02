@@ -7,25 +7,25 @@
 
         <nav>
             <ul class="main_links">
-                <li>
-                    <nuxt-link to="#">About</nuxt-link>
-                </li><li>
-                    <nuxt-link to="#">Contacts</nuxt-link>
-                </li><li>
-                    <nuxt-link to="#">Skills</nuxt-link>
-                </li><li>
-                    <nuxt-link to="#">Projects</nuxt-link>
+                <li @click="close()">
+                    <a href="#education">Education</a>
+                </li><li @click="close()">
+                    <a href="#contacts">Contacts</a>
+                </li><li @click="close()">
+                    <a href="#technologies">Skills</a>
+                </li><li @click="close()">
+                    <a href="#projects">Projects</a>
                 </li>
             </ul>
         </nav>
 
         <ul class="other_links">
             <li>
-                <a href="#">Living examples of works</a>
+                <nuxt-link to="/living_examples">Living examples of works</nuxt-link>
             </li><li>
-                <a href="#">Order a website</a>
+                <nuxt-link to="/order_site">Order a website</nuxt-link>
             </li><li>
-                <a href="#">Write me</a>
+                <nuxt-link to="/chata">Write me</nuxt-link>
             </li>
         </ul>
     </div>
@@ -33,6 +33,12 @@
 
 <script>
 export default {
-    props:['anim_class']
+    props:['anim_class'],
+    methods:{
+        close(){
+            console.log('OK');
+            this.$emit('change_show_menu')
+        }
+    }
 }
 </script>

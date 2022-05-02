@@ -11,45 +11,45 @@
         <nav class="desctop">
             <ul class="main_links">
                 <li>
-                    <nuxt-link to="#">About</nuxt-link>
+                    <nuxt-link to="#education">Education</nuxt-link>
                 </li><li>
-                    <nuxt-link to="#">Contacts</nuxt-link>
+                    <nuxt-link to="#contact">Contacts</nuxt-link>
                 </li><li>
-                    <nuxt-link to="#">Skills</nuxt-link>
+                    <nuxt-link to="#technologies">Skills</nuxt-link>
                 </li><li>
-                    <nuxt-link to="#">Projects</nuxt-link>
+                    <nuxt-link to="#projects">Projects</nuxt-link>
                 </li>
             </ul>
         </nav>
 
         <ul class="other_links desctop">
             <li>
-                <a href="#">
+                <nuxt-link to="/living_examples">
                     <p>Living examples of works</p>
                     <div class="hover">
                         <svg>
                             <use xlink:href='~/assets/images/sprite.svg#living_ex'></use>
                         </svg>
                     </div>
-                    </a>
+                    </nuxt-link>
             </li><li>
-                <a href="#">
+                <nuxt-link to="/order_site">
                     <p>Order a website</p>
                     <div class="hover">
                         <svg>
                             <use xlink:href='~/assets/images/sprite.svg#order'></use>
                         </svg>
                     </div>
-                </a>
+                </nuxt-link>
             </li><li>
-                <a href="#">
+                <nuxt-link to="/chat">
                     <p>Write me</p>
                     <div class="hover">
                         <svg>
                             <use xlink:href='~/assets/images/sprite.svg#chat'></use>
                         </svg>
                     </div>
-                </a>
+                </nuxt-link>
             </li>
         </ul>
 
@@ -63,7 +63,7 @@
             </svg>
         </button>
 
-        <MobileMenu :anim_class="anim_menu_class"/>
+        <MobileMenu :anim_class="anim_menu_class" @change_show_menu='change_show_menu'/>
     </header>
 </template>
 

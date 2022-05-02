@@ -1,5 +1,5 @@
 <template>
-    <div class="technologies">
+    <div class="technologies" id="technologies">
         <h2 class="title">Technologies</h2>
 
         <div class="all_tech_blok">

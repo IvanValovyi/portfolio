@@ -1,5 +1,5 @@
 <template>
-    <div class="projects">
+    <div class="projects" id="projects">
         <h2 class="title">Projects</h2>
         <div class="projects_list">
             <div v-for="(el, i) in projects" :key="i" :class="['project', el.class]">
