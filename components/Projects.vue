@@ -30,11 +30,11 @@ export default {
         return{
             projects:[
                 {
-                    name:'KMK Group',
+                    name:'Jane Doe CV',
                     type:'Landing page',
-                    img:require('~/assets/images/kmk.png'),
+                    img:require('~/assets/images/jane_doe.png'),
                     technologies:['HTML', 'SASS', 'JS'],
-                    link:'https://ivanvalovyi.github.io/kmk_test/'
+                    link:'https://ivanvalovyi.github.io/jane_doe/'
                 },{
                     name:'Jane Blog',
                     type:'Landing page',
