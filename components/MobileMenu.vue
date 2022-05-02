@@ -21,11 +21,11 @@
 
         <ul class="other_links">
             <li>
-                <nuxt-link to="/living_examples">Living examples of works</nuxt-link>
+                <nuxt-link to="/living_examples" @click="close()">Living examples of works</nuxt-link>
             </li><li>
-                <nuxt-link to="/order_site">Order a website</nuxt-link>
+                <nuxt-link to="/order_site" @click="close()">Order a website</nuxt-link>
             </li><li>
-                <nuxt-link to="/chata">Write me</nuxt-link>
+                <nuxt-link to="/chat" @click="close()">Write me</nuxt-link>
             </li>
         </ul>
     </div>
