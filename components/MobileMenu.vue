@@ -36,7 +36,6 @@ export default {
     props:['anim_class'],
     methods:{
         close(){
-            console.log('OK');
             this.$emit('change_show_menu')
         }
     }
