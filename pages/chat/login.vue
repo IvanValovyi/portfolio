@@ -38,7 +38,7 @@ export default {
         let user = localStorage.getItem('user')
         if (user) {
             user = JSON.parse(user)
-            socket.emit('checkLog', (user._id))
+            socket.emit('checkLog', user._id)
 
             socket.on('checkLog', (log_user)=>{
                 if (log_user) {
