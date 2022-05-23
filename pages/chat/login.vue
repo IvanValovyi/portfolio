@@ -35,7 +35,7 @@ export default {
         }
     },
     mounted(){
-        let user = localStorage.getItem('user')
+        let user = localStorage.getItem('user') 
         if (user) {
             user = JSON.parse(user)
             socket.emit('checkLog', user._id)
