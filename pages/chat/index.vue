@@ -94,8 +94,14 @@ export default {
                     })
 
                     socket.on('message', ({mess, chat_id})=>{
-                        if (mess && this.chat_id == chat_id) {
-                            this.messages.push(mess)
+                        let is_my_id = this.user.id == chat_id ? true : false
+                        if (mess) {
+                            if (is_my_id) {
+                                this.messages.push(mess)
+                            } else if (this.chat_id == chat_id){
+                                this.messages.push(mess)
+                            }
+
                         }
                     })
                 } else {
