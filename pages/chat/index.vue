@@ -93,9 +93,9 @@ export default {
                         socket.emit('getMessages', ({user:this.user, chat_id:this.chat_id}))
                     })
 
-                    socket.on('message', (message)=>{
-                        if (message) {
-                            this.messages.push(message)
+                    socket.on('message', ({mess, chat_id})=>{
+                        if (mess && this.chat_id == chat_id) {
+                            this.messages.push(mess)
                         }
                     })
                 } else {
