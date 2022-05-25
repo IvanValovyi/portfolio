@@ -2,14 +2,14 @@
     <div :class="chat_class" :style="{height: `calc(100vh - ${header_height}px)`}">
         <div class="main_info" v-if="user!={}">
             <h1 class="name">{{ user.name }}</h1>
-            <div class="show_users" @click="change_users_list_class()" v-if="all_users.length>=2"><span>All Users</span></div>
+            <div class="show_users" @click="change_users_list_class()" v-if="all_users.length>=1"><span>All Users</span></div>
             <div class="to_all_height" @click="change_chat_class_click()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" v-if="chat_class=='chat'"><path d="M21.414 18.586l2.586-2.586v8h-8l2.586-2.586-5.172-5.172 2.828-2.828 5.172 5.172zm-13.656-8l2.828-2.828-5.172-5.172 2.586-2.586h-8v8l2.586-2.586 5.172 5.172zm10.828-8l-2.586-2.586h8v8l-2.586-2.586-5.172 5.172-2.828-2.828 5.172-5.172zm-8 13.656l-2.828-2.828-5.172 5.172-2.586-2.586v8h8l-2.586-2.586 5.172-5.172z"/></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" v-else><path d="M14 3h3l-5 5-5-5h3v-3h4v3zm-4 18h-3l5-5 5 5h-3v3h-4v-3zm-7-11v-3l5 5-5 5v-3h-3v-4h3zm18 4v3l-5-5 5-5v3h3v4h-3z"/></svg>
             </div>
         </div>
 
-        <div :class="users_list_class" v-if="all_users.length>=2">
+        <div :class="users_list_class" v-if="all_users.length>=1">
             <div class="user" v-for="(el, i) in all_users" :key="i" @click="setChatId(el)">
                 <p class="name">{{ el.name }}</p>
             </div>
@@ -100,7 +100,7 @@ export default {
             socket.on('checkLog', (log_user)=>{
                 if (log_user) {
                     this.user = log_user
-                    
+
                     socket.on('allUsers', data=>{
                         if (data && data.length != 0) {
                             this.all_users = data
