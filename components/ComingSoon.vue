@@ -8,6 +8,12 @@
 
 <script>
 export default {
-    props:['page_name']
+    props:['page_name'],
+    mounted(){
+        let body = document.querySelector('body')
+        if (body.classList.contains('hidden')) {
+            body.classList.remove('hidden')
+        }
+    }
 }
 </script>

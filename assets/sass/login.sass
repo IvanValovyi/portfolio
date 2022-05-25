@@ -1,0 +1,50 @@
+@import './mixin'
+
+.login
+    @include flex(center, center)
+    .form
+        @include flex(center, center, column)
+        box-shadow: 0 0 4px 8px #bbbaba8f
+        padding: 30px 50px
+        border-radius: 5px
+        h1
+            font-size: 30px
+            font-weight: 400
+        input
+            border: 1px solid black
+            padding: 5px
+            border-radius: 5px
+            font-size: 20px
+            margin: 20px 0
+        button
+            font-size: 24px
+            background: black
+            border: 1px solid black
+            color: white
+            padding: 3px 13px
+            border-radius: 5px
+            cursor: pointer
+            transition: 0.3s
+            &:hover 
+                background: #e6e6e6
+                color: black
+
+@media ( max-width: 420px )
+    .login .form
+        padding: 15px 25px
+        h1
+            font-size: 28px
+        input
+            font-size: 18px
+            margin: 15px 0
+        button
+            font-size: 20px
+
+@media ( max-width: 340px )
+    .login .form h1
+        font-size: 22px
+
+@media ( max-width: 315px )
+    .login .form
+        box-shadow: none
+        border: 1px solid black

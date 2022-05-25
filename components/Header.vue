@@ -84,6 +84,7 @@ export default {
     methods:{
         change_show_menu(){
             if (this.anim_menu_class.length==0) {
+                window.scrollTo(0, 0)
                 this.anim_menu_class=['anim', 'anim_btn']
                 setTimeout(() => {
                     if (this.anim_menu_class.length==2) {

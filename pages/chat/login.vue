@@ -1,8 +1,10 @@
 <template>
-    <div class="login">
-        <input type="text" class="name_inp" placeholder="Enter your name here..." v-model="name_inp">
-        <div class="error" v-if="is_err">Error !!!</div>
-        <button class="send" @click="logIn()">SEND</button>
+    <div class="login" :style="{height: `calc(100vh - ${header_height}px)`}">
+        <div class="form">
+            <h1>Chat Registration Form</h1>
+            <input type="text" class="name_inp" placeholder="Enter your name here..." v-model="name_inp">
+            <button class="send" @click="logIn()">Log In</button>
+        </div>
     </div>
 </template>
 
@@ -10,10 +12,12 @@
 import socket from '../../plugins/socket.io'
 
 export default {
+    layout:'chat',
     data(){
         return{
             name_inp:'',
-            is_err:false
+            is_err:false,
+            header_height:0
         }
     },
     methods:{
@@ -26,6 +30,7 @@ export default {
         }
     },
     mounted(){
+        this.header_height = document.querySelector('header').clientHeight
         socket.on('checkLog', (log_user)=>{
             if (log_user) {
                 this.$router.push('/chat')
