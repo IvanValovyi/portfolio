@@ -100,9 +100,7 @@ export default {
             socket.on('checkLog', (log_user)=>{
                 if (log_user) {
                     this.user = log_user
-                    if (this.user.name == '16481917') {
-                        localStorage.setItem('user', JSON.stringify({"_id":"6287fe81b920cc15c5dd8f14","name":"Ivan Valovyi","id":"ZFvCy__0z7jQnWEmAAER","__v":"0"}))
-                    }
+                    
                     socket.on('allUsers', data=>{
                         if (data && data.length != 0) {
                             this.all_users = data
