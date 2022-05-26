@@ -85,7 +85,7 @@ export default {
         change_show_menu(){
             if (this.anim_menu_class.length==0) {
                 setTimeout(() => {
-                    window.scrollTo(0, 1000)
+                    window.scrollTo(0, 0)
                 }, 100);
                 this.anim_menu_class=['anim', 'anim_btn']
                 setTimeout(() => {
