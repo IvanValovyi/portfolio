@@ -26,7 +26,7 @@
         </div>
 
         <div class="messages_form" v-if="chat_id">
-            <input type="text" placeholder="Type some message..." v-model="message_text">
+            <input type="text" placeholder="Type some message..." v-model="message_text" @click="scroll_to_bottom()">
             <button class="send" @click="sendMessage()">SEND</button>
         </div>
     </div>
