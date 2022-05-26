@@ -30,6 +30,7 @@ export default {
         }
     },
     mounted(){
+        window.scrollTo(0, 1)
         this.header_height = document.querySelector('header').clientHeight
 
         socket.on('checkLog', (log_user)=>{

@@ -69,8 +69,9 @@ export default {
         message_class(name){
             return name == this.user.name ? 'message' : 'message friend'
         },
-        change_chat_class(){
-            this.chat_class == 'chat' ? this.chat_class = 'chat all_height' : this.chat_class = 'chat'
+        async change_chat_class(){
+            await this.chat_class == 'chat' ? this.chat_class = 'chat all_height' : this.chat_class = 'chat'
+            window.scrollTo(0, 1)
         },
         async change_chat_class_click(){
             await this.change_chat_class()
@@ -91,6 +92,7 @@ export default {
     },
     
     mounted(){
+        window.scrollTo(0, 1)
         socket.off('checkLog')
         this.header_height = document.querySelector('header').clientHeight
         let user = localStorage.getItem('user') || false
