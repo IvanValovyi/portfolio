@@ -92,7 +92,6 @@ export default {
     },
     
     mounted(){
-        window.scrollTo(0, 1)
         socket.off('checkLog')
         this.header_height = document.querySelector('header').clientHeight
         let user = localStorage.getItem('user') || false
@@ -147,6 +146,9 @@ export default {
         } else {
             this.$router.push('/chat/login')
         }
+        setTimeout(() => {
+            window.scrollTo(0, 1)
+        }, 100);
     }
 }
 </script>
