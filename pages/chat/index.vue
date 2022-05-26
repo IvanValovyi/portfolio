@@ -147,7 +147,7 @@ export default {
             this.$router.push('/chat/login')
         }
         setTimeout(() => {
-            window.scrollTo(0, 100)
+            document.querySelector('header').scrollTo(0, 100)
         }, 100);
     }
 }
