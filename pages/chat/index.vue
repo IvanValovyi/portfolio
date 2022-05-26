@@ -91,15 +91,18 @@ export default {
     },
     
     mounted(){
+        console.log('Mounted');
         this.header_height = document.querySelector('header').clientHeight
         let user = localStorage.getItem('user') || false
         if (user) {
-            user = JSON.parse(user)
-            socket.emit('checkLog', (user._id))
-
             socket.on('checkLog', (log_user)=>{
-                if (log_user) {
+                if (!log_user) {
+                    console.log('Check Log failed');
+                    socket.off('checkLog')
+                    this.$router.push('/chat/login')
+                } else {
                     this.user = log_user
+                    console.log('Check log on');
 
                     socket.on('allUsers', data=>{
                         if (data && data.length != 0) {
@@ -138,13 +141,17 @@ export default {
                         await this.messages.push(mess)
                         this.scroll_to_bottom()
                     })
-                } else {
-                    this.$router.push('/chat/login')
                 }
             })
+
+            user = JSON.parse(user)
+            socket.emit('checkLog', (user._id))
         } else {
             this.$router.push('/chat/login')
         }
+    },
+    unmounted(){
+        console.log('Component Unmount');
     }
 }
 </script>

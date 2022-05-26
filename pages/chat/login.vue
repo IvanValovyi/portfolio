@@ -31,15 +31,16 @@ export default {
     },
     mounted(){
         this.header_height = document.querySelector('header').clientHeight
+
         socket.on('checkLog', (log_user)=>{
             if (log_user) {
                 this.$router.push('/chat')
             } else {
             this.is_err = true
-        }
+            }
         })
 
-        socket.on('logIn', el=>{
+        socket.on('logIn', async (el)=>{
             if (el) {
                 localStorage.setItem('user', JSON.stringify(el))
                 this.$router.push('/chat')
