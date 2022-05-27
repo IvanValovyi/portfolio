@@ -82,6 +82,7 @@ export default {
             if (messages) {
                 messages.scrollTo(0, messages.scrollHeight)
             }
+            window.scrollTo(0, 1000)
         },
         setMess(el){
             this.messages = el
