@@ -26,7 +26,7 @@
         </div>
 
         <div class="messages_form" v-if="chat_id">
-            <input type="text" placeholder="Type some message..." v-model="message_text" @click="setTimeout(()=>{scroll_to_bottom()}, 100)">
+            <input type="text" placeholder="Type some message..." v-model="message_text" @click="setTimeout(scroll_to_bottom(), 100)">
             <button class="send" @click="sendMessage()">SEND</button>
         </div>
     </div>
@@ -71,7 +71,6 @@ export default {
         },
         async change_chat_class(){
             await this.chat_class == 'chat' ? this.chat_class = 'chat all_height' : this.chat_class = 'chat'
-            window.scrollTo(0, 1)
         },
         async change_chat_class_click(){
             await this.change_chat_class()
