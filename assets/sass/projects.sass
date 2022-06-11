@@ -22,6 +22,9 @@
                 top: 0
                 right: 0
                 box-shadow: 32px -32px 34px -20px rgba(0,0,0,0.7)
+            .info
+                position: absolute
+                left: 55%
             &.reverse
                 flex-direction: row-reverse
                 &::before
@@ -34,6 +37,7 @@
                     box-shadow: -32px -32px 34px -20px rgba(0,0,0,0.7)
                 .info
                     @include flex(space-between, flex-end, column)
+                    left: 0
                     .header
                         @include flex(flex-start, flex-start, column)
                     a
@@ -45,17 +49,14 @@
 
                     .technologies
                         @include flex(flex-start, flex-start, column)
-            .image
-                flex: 55
-                height: 650px
-                background-position: center
-                background-repeat: no-repeat
-                background-size: cover
+
+            img
+                width: 55%
                 position: relative
                 z-index: 3
             .info
-                flex: 45
-                height: 650px
+                width: 45%
+                height: 100%
                 @include flex(space-between, flex-start, column)
                 .header
                     @include flex(flex-start, flex-end, column)
@@ -122,51 +123,49 @@
                             &.JS
                                 color: black
                                 background: rgba(247, 223, 30, 1)
+                            &.React
+                                background: #3c7bc4
+                                color: white
+                            &.OpenLayers
+                                background: #0e4d94
+                                color: white
+                            &.Angular
+                                background: #d61e1e
+                                color: white
 
 @media ( max-width: 1700px )
     .projects .projects_list .project
         &::before, &.reverse::before
             width: 300px
             height: 300px
-        .image, .info
-            height: 500px
 
 @media ( max-width: 1350px )
     .projects .projects_list .project
         &::before, &.reverse::before
             width: 250px
             height: 250px
-        .image, .info
-            height: 450px
-        .image
-            flex: 60
+        img
+            width: 60%
         .info
-            flex: 40
+            width: 40%
+            left: 60%
 
 @media ( max-width: 1100px )
     .projects .projects_list .project
         &::before, &.reverse::before
             width: 200px
             height: 200px
-        .image, .info
-            height: 370px
-
-@media ( max-width: 930px )
-    .projects .projects_list .project
-        .image, .info
-            height: 320px
 
 @media ( max-width: 800px )
     .projects .projects_list .project
         &::before, &.reverse::before
             width: 0px
             height: 0px
-        height: 320px
+        height: 100%
         &.reverse .info .header
             @include flex(flex-start, flex-end, column)
-        .image
-            position: absolute
-            height: 100%
+        img
+            position: relative
             width: 100%
             top: 0
             left: 0
@@ -211,13 +210,8 @@
                     opacity: 1
                     z-index: 2
 
-@media ( max-width: 500px )
-    .projects .projects_list .project
-        height: 270px
-
 @media ( max-width: 400px )
     .projects .projects_list .project
-        height: 220px
         .info 
             .header
                 h3.subtitle, p

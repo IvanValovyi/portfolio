@@ -3,7 +3,8 @@
         <h2 class="title">Projects</h2>
         <div class="projects_list">
             <div v-for="(el, i) in projects" :key="i" :class="['project', el.class]">
-                <div class="image" :style="{backgroundImage:`url(${el.img})`}"></div>
+                <!-- <div class="image" :style="{backgroundImage:`url(${el.img})`}"></div> -->
+                <img :src="el.img" alt="">
                 <div class="info">
                     <div class="header">
                         <h3 class="subtitle">{{el.name}}</h3>
@@ -30,12 +31,6 @@ export default {
         return{
             projects:[
                 {
-                    name:'Jane Doe CV',
-                    type:'Landing page',
-                    img:require('~/assets/images/jane_doe.png'),
-                    technologies:['HTML', 'SASS', 'JS'],
-                    link:'https://ivanvalovyi.github.io/jane_doe/'
-                },{
                     name:'Jane Blog',
                     type:'Landing page',
                     img:require('~/assets/images/jane_blog.png'),
@@ -55,6 +50,25 @@ export default {
                     technologies:['HTML', 'SASS', 'JS'],
                     class:'reverse',
                     link:'https://ivanvalovyi.github.io/photo_app'
+                },{
+                    name:'Weather React',
+                    type:'Weather app',
+                    img:require('~/assets/images/weather.png'),
+                    technologies:['React', 'OpenLayers'],
+                    link:'https://ivanvalovyi.github.io/weather/'
+                },{
+                    name:'Jane Doe CV',
+                    type:'Landing page',
+                    img:require('~/assets/images/jane_doe.png'),
+                    technologies:['HTML', 'SASS', 'JS'],
+                    class:'reverse',
+                    link:'https://ivanvalovyi.github.io/jane_doe/'
+                },{
+                    name:'Angular Form',
+                    type:'Form',
+                    img:require('~/assets/images/angular_form.png'),
+                    technologies:['Angular', 'SASS'],
+                    link:'https://ivanvalovyi.github.io/angular-form/'
                 }
             ]
         }
