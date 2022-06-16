@@ -8,13 +8,13 @@
         <nav>
             <ul class="main_links">
                 <li @click="close()">
-                    <a href="#education">Education</a>
+                    <a href="/#education">Education</a>
                 </li><li @click="close()">
-                    <a href="#contacts">Contacts</a>
+                    <a href="/#contacts">Contacts</a>
                 </li><li @click="close()">
-                    <a href="#technologies">Skills</a>
+                    <a href="/#technologies">Skills</a>
                 </li><li @click="close()">
-                    <a href="#projects">Projects</a>
+                    <a href="/#projects">Projects</a>
                 </li>
             </ul>
         </nav>
