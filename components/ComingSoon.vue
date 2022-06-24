@@ -2,7 +2,10 @@
     <div class="coming_soon">
         <h1>Coming Soon</h1>
         <p>The {{ page_name }} page is under development.</p>
-        <nuxt-link to="/">To Main Page</nuxt-link>
+        <div class="links">
+            <nuxt-link to="/">To Main Page</nuxt-link>
+            <nuxt-link to="/chat">To Chat Page</nuxt-link>
+        </div>
     </div>
 </template>
 

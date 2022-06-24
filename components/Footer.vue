@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <p class="small_text">© 2022. All rights reserved (actually not).</p>
+        <p class="small_text">© 2022. All Rights Reserved.</p>
     </footer>
 </template>
 

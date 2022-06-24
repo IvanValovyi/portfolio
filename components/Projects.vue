@@ -32,14 +32,14 @@ export default {
             projects:[
                 {
                     name:'Jane Blog',
-                    type:'Landing page',
+                    type:'Landing Page',
                     img:require('~/assets/images/jane_blog.png'),
                     technologies:['HTML', 'SASS', 'JS'],
                     class:'reverse',
                     link:'https://ivanvalovyi.github.io/jane_blog/'
                 },{
                     name:'Tour Cloud',
-                    type:'Company site',
+                    type:'Company Site',
                     img:require('~/assets/images/tour_cloud.png'),
                     technologies:['HTML', 'SASS', 'JS'],
                     link:'https://ivanvalovyi.github.io/tour_cloud/home.html'
@@ -58,14 +58,14 @@ export default {
                     link:'https://ivanvalovyi.github.io/photo_app'
                 },{
                     name:'Weather React',
-                    type:'Weather app',
+                    type:'Weather App',
                     img:require('~/assets/images/weather.png'),
                     technologies:['React', 'OpenLayers'],
                     class:'reverse',
                     link:'https://ivanvalovyi.github.io/weather/'
                 },{
                     name:'Jane Doe CV',
-                    type:'Landing page',
+                    type:'Landing Page',
                     img:require('~/assets/images/jane_doe.png'),
                     technologies:['HTML', 'SASS', 'JS'],
                     link:'https://ivanvalovyi.github.io/jane_doe/'

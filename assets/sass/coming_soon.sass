@@ -26,7 +26,7 @@
         position: absolute
         width: 75px
         height: 75px
-        top: 50%
+        top: 50% 
         transform: translate(0, -50%) rotate(0deg)
         left: 0
         animation: rocket 40s linear infinite
@@ -54,16 +54,19 @@
 
     h1, p
         margin-bottom: 20px
-    a
-        color: black
-        background: white
-        padding: 5px 10px
-        font-size: 20px
-        border: 1px solid white
-        transition: 0.3s
-        &:hover 
-            background: black
-            color: white
+    .links
+        @include flex(center, center)
+        a
+            color: black
+            background: white
+            padding: 5px 10px
+            font-size: 20px
+            border: 1px solid white
+            transition: 0.3s
+            margin: 10px
+            &:hover 
+                background: black
+                color: white
     h1
         font-size: 36px
         letter-spacing: 1px

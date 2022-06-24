@@ -8,13 +8,13 @@
         <nav>
             <ul class="main_links">
                 <li @click="close()">
-                    <a href="/#education">Education</a>
+                    <nuxt-link to="/#education">Education</nuxt-link>
                 </li><li @click="close()">
-                    <a href="/#contacts">Contacts</a>
+                    <nuxt-link to="/#contacts">Contacts</nuxt-link>
                 </li><li @click="close()">
-                    <a href="/#technologies">Skills</a>
+                    <nuxt-link to="/#technologies">Skills</nuxt-link>
                 </li><li @click="close()">
-                    <a href="/#projects">Projects</a>
+                    <nuxt-link to="/#projects">Projects</nuxt-link>
                 </li>
             </ul>
         </nav>

@@ -3,9 +3,7 @@
         <h2 class="title">Technologies</h2>
 
         <div class="all_tech_blok">
-
             <div v-for="(el, i) in all_technologies" :key="i" :class="['one_tech_blok', el.title]">
-
                 <h3 class="subtitle">{{el.title}}</h3>
 
                 <div class="tech_list">
@@ -17,7 +15,6 @@
 
                 </div>
             </div>
-
         </div>
     </div>
 </template>
@@ -54,12 +51,21 @@ export default {
                         name:'Nuxt JS',
                         style:{background:'rgba(16, 135, 117, 1)'}
                     },{
-                        name:'Angular',
-                        style:{background:'rgba(221, 0, 49, 1)'}
-                    },{
                         name:'Gulp JS',
                         style:{background:'rgba(254, 74, 75, 1)'}
-                    }
+                    },{
+                        name:'React',
+                        style:{background:'#5183ee'}
+                    },{
+                        name:'React Router',
+                        style:{background:'#3e75eb'}
+                    },{
+                        name:'Redux',
+                        style:{background:'#7341d1'}
+                    },{
+                        name:'Angular',
+                        style:{background:'rgba(221, 0, 49, 1)'}
+                    },
                 ]
             },{
                 title:'Backend',

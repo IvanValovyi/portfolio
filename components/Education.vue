@@ -30,12 +30,25 @@ export default {
     computed:{
         education_text(){
             return this.leanguage=='EN' ? 
-            ['I took frontend development courses, during which I studied JavaScript, VueJS, VueX, Vue router, GulpJS and Nuxt, got acquainted with the basic principles and methodologies of site interface development.',
-            'I also studied the SASS / SCSS preprocessor, the Express framework, the MongoDB database, Mongoose, Soсket.io, Nest, Postgres.',
-            "Now I'm studying Docker, I'm still studying Nest and Postgress, Nuxt, Socket.io."] : 
-            ['Курси по front end розробці, в ході яких вивчав HTML 5, CSS 3, Java Script, навчився працювати з Git / Git Hub, вивчив основні принципи розробки сайтів на Vue JS з використанням технологій Vue Router та Vue X',
-            'Крім курсів також самостійно вивчав фреймворк Nuxt.js, препроцесор SASS, додаток Figma linux, навчився користуватись AOS.',
-            'Зараз вивчаю і активно розвиваюсь в таких технологіях як Socket.io, Express.js, Mongo DB, продовжую вивчати Nuxt JS і SSR, поглиблюю свої знання в SASS та Java Script.']
+            [`I studied HTML, CSS / SASS, JavaScript, Vue on my own, after which I took Frontend development courses.
+            during which I consolidated his knowledge in the creation of sites, got acquainted in more detail with JavaScript and Vue, began
+            use VueX and Vue Router.`,
+            `After the courses, I continued to study JavaScript and Vue in more detail, and started working with Nuxt.`,
+            `Having mastered Nuxt, I went on to study Backend development - at a basic level I understood Node, Express,
+            MongoDB, tried to use Mongoose.  I also started working with Socket.io.`,
+            `After dealing with Backend, I continued to study Frontend development - understood the architecture of Angular, began
+            studying React, Redux, React Router, which, in fact, I still do.`,
+            `I plan to start working with Next, Nest, Postgress.`] 
+            : 
+            [`Займався самостійним вивченням HTML, CSS/SASS, JavaScript, Vue, після чого пройшов курси Frontend розробки
+            в ході яких закріпив свої знання у верстанні сайтів, більш детально познайомився з JavaScript і Vue, почав
+            використовувати VueX і Vue Router.`,
+            `Після курсів продовжив більш детально вивчати JavaScript і Vue, почав працювати з Nuxt.`,
+            `Опанувавши Nuxt перейшов до вивчення Backend розробки - на базовому рівні розібрався з Node, Express,
+            MongoDB, познайомився з Mongoose. Також почав працювати з Socket.io.`,
+            `Розібравшись з Backend продовжив вивчення Frontend розробки - розібрався з архітектурою Angular, почав
+            вивчати React, Redux, React Router, чим, власне, займаюсь і досі.`,
+            `В планах почати працювати з Next, Nest, Postgress.`]
         }
     },
     methods:{

@@ -13,13 +13,20 @@
             background: #100F0F
             padding: 5px
             @include flex(flex-start, flex-start, column)
-            width: 30%
-            &.Frontend h3::before
-                background: #165400
-            &.Backend h3::before
-                background: #6F0000
-            &.Other h3::before
-                background: #011F6D
+            
+            &.Frontend 
+                width: 45%
+                h3::before
+                    background: #165400
+
+            &.Backend 
+                width: 30%
+                h3::before
+                    background: #6F0000
+            &.Other
+                width: 15%
+                h3::before
+                    background: #011F6D
             h3
                 position: relative
                 left: -5px
@@ -53,19 +60,32 @@
                         margin-left: 15px
                         margin-right: 10px
                         border-radius: 3px
+            &.Frontend .tech_list .one_tech
+                width: calc( 100% / 3 )
+
+            &.Other .tech_list 
+                flex-direction: column
+                .one_tech
+                    width: 100%
+
 
 @media ( max-width: 1024px )
     .technologies .all_tech_blok
         @include flex(flex-start, center, column)
         .one_tech_blok
-            width: 65%
+            width: 85%!important
+            .tech_list 
+                flex-direction: row!important
+                .one_tech
+                    width: calc( 100% / 3 )!important
             &:nth-child(2)
                 margin: 50px 0
 
-@media ( max-width: 700px )
+@media ( max-width: 650px )
     .technologies .all_tech_blok
         .one_tech_blok
-            width: 85%
+            .tech_list .one_tech
+                    width: calc( 100% / 2 )!important
             &:nth-child(2)
                 margin: 40px 0
 
