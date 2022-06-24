@@ -16,7 +16,7 @@
                 <p class="subtitle">Gmail</p>
             </a>
 
-            <nuxt-link to="/chat" class="one_contact">
+            <nuxt-link to="/chat" class="one_contact chat_link">
                 <svg>
                     <use xlink:href='~/assets/images/sprite.svg#chat'></use>
                 </svg>

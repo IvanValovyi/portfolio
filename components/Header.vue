@@ -109,6 +109,9 @@ export default {
     },
     mounted(){
         this.body = document.querySelector('body')
+        if (this.body.classList.contains('hidden')) {
+            this.body.classList.remove('hidden')
+        }
     }
 }
 </script>
