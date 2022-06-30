@@ -26,7 +26,7 @@
         </div>
 
         <div class="messages_form" v-if="chat_id">
-            <input type="text" placeholder="Type some message..." v-model="message_text" @click="setTimeout(scroll_to_bottom(), 100)">
+            <input type="text" placeholder="Type some message..." v-model="message_text">
             <button class="send" @click="sendMessage()">SEND</button>
         </div>
     </div>
@@ -64,6 +64,7 @@ export default {
                 let message = {name:this.user.name, text:this.message_text}
                 socket.emit('message', {mess:message, chat_id:this.chat_id, user_id:this.user._id})
                 this.message_text = ''
+                this.scroll_to_bottom()
             }
         },
         message_class(name){
