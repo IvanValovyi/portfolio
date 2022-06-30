@@ -24,7 +24,7 @@
                 <nuxt-link to="/living_examples">Living examples of works</nuxt-link>
             </li><li @click="close()">
                 <nuxt-link to="/order_site">Order a website</nuxt-link>
-            </li><li @click="close()">
+            </li><li @click="close()"> 
                 <nuxt-link to="/chat">Write me</nuxt-link>
             </li>
         </ul>
