@@ -10,7 +10,7 @@
                 <li @click="close()">
                     <nuxt-link to="/#education">Education</nuxt-link>
                 </li><li @click="close()">
-                    <nuxt-link to="/#contacts">Contacts</nuxt-link>
+                    <nuxt-link to="/#contact">Contacts</nuxt-link>
                 </li><li @click="close()">
                     <nuxt-link to="/#technologies">Skills</nuxt-link>
                 </li><li @click="close()">
