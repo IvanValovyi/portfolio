@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/order_site", {data:[{}],fetch:{},mutations:void 0});
