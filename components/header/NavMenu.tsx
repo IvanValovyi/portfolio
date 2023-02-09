@@ -39,8 +39,11 @@ export default function NavMenu({ headerHeight, onLinkClick, links }: Props) {
         />
       </div>
       <div
-        style={{ height: `calc(100vh - ${headerHeight}px)` }}
-        className={`fixed z-40 pb-[50px] flex flex-col items-center justify-between bg-primaryBg dark:bg-primaryBgDark bottom-0 w-full transition-all ${
+        style={{
+          height: `calc(100vh - ${headerHeight}px)`,
+          top: `${headerHeight}px`,
+        }}
+        className={`fixed z-40 pb-[50px] flex flex-col items-center justify-between bg-primaryBg dark:bg-primaryBgDark w-full transition-all ${
           show ? "left-[0%]" : "left-[100%]"
         }`}
       >

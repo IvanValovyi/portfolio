@@ -37,7 +37,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <IntlProvider
         locale={locale}
         defaultLocale={Locales.en}
-        messages={locale == Locales.en ? en : uk}
+        messages={locale == Locales.uk ? uk : en}
       >
         <Component {...pageProps} />
       </IntlProvider>
