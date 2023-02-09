@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, html {
+	scroll-behavior: smooth!important;
+}
+
+body * {
+	@apply transition-colors duration-200;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.projectSwiper * {
+	transition-duration: initial;
+	a, button{
+		@apply transition-all duration-200;
+	}
+}
+
+.scroll-animation{
+	animation: scroll-animation 1s ease-in-out forwards;
+}
+
+@keyframes scroll-animation {
+	0%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 1;
+	}
+}
