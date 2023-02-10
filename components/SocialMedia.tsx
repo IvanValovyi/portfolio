@@ -17,7 +17,7 @@ const socialMedia: socialMediaItem[] = [
     icon: (className: string) => <Telegram className={className} />,
   },
   {
-    link: "tel:+389065535629",
+    link: "tel:096 553 56 29",
     icon: (className: string) => <Phone className={className} />,
   },
 ];
