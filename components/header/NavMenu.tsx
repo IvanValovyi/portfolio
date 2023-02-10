@@ -65,7 +65,9 @@ export default function NavMenu({ headerHeight, onLinkClick, links }: Props) {
             );
           })}
         </div>
-        <SocialMedia className="absolute bottom-[50px] left-[50%] translate-x-[-50%]"/>
+        <SocialMedia className={`fixed bottom-[50px] translate-x-[-50%] transition-all ${
+          show ? "left-[50%]" : "left-[150%]"
+        }`}/>
       </div>
     </>
   );
