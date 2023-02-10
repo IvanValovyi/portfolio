@@ -5,6 +5,7 @@ import ToogleTheme from "./ToogleTheme";
 import NavMenu from "./NavMenu";
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
+import { Theme } from "@/pages";
 
 export interface LinkItem {
   text: string;
@@ -12,10 +13,11 @@ export interface LinkItem {
 }
 
 interface Props {
+  theme: Theme;
   toogleTheme: () => void;
 }
 
-export default function Header({ toogleTheme }: Props) {
+export default function Header({ theme, toogleTheme }: Props) {
   const { formatMessage } = useIntl();
 
   const links: LinkItem[] = [
@@ -85,10 +87,18 @@ export default function Header({ toogleTheme }: Props) {
           );
         })}
       </div>
-      <ToogleTheme className={"flex lg:hidden"} toogleTheme={toogleTheme} />
+      <ToogleTheme
+        theme={theme}
+        className={"flex lg:hidden"}
+        toogleTheme={toogleTheme}
+      />
       <div className="flex items-center gap-[20px] lg:gap-[40px]">
         <ToogleLang />
-        <ToogleTheme className={"hidden lg:flex"} toogleTheme={toogleTheme} />
+        <ToogleTheme
+          theme={theme}
+          className={"hidden lg:flex"}
+          toogleTheme={toogleTheme}
+        />
         <NavMenu
           headerHeight={headerHeight}
           onLinkClick={onLinkClick}

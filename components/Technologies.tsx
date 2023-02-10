@@ -15,61 +15,69 @@ const technologiesList: TechnologyItemData[] = [
     imgSrc: "/images/technologies/sass.webp",
   },
   {
+    name: "Bootstrap",
+    imgSrc: "/images/technologies/bootstrap.webp",
+  },
+  {
+    name: "Tailwind",
+    imgSrc: "/images/technologies/tailwind.webp",
+  },
+  {
     name: "JavaScript",
     imgSrc: "/images/technologies/js.webp",
   },
   {
-	name: "Vue.js",
-	imgSrc: "/images/technologies/vue.webp",
- },
- {
-	name: "Vuex",
-	imgSrc: "/images/technologies/vuex.webp",
- },
- {
-	name: "Vue Router",
-	imgSrc: "/images/technologies/vue-router.webp",
- },
- {
-	name: "Nuxt",
-	imgSrc: "/images/technologies/nuxt.webp",
- },
- {
-	name: "React",
-	imgSrc: "/images/technologies/react.webp",
- },
- {
-	name: "Redux",
-	imgSrc: "/images/technologies/redux.webp",
- },
- {
-	name: "React Router",
-	imgSrc: "/images/technologies/react-router.webp",
- },
- {
-	name: "Next",
-	imgSrc: "/images/technologies/next.webp",
- },
- {
-	name: "SWR",
-	imgSrc: "/images/technologies/swr.webp",
- },
- {
-	name: "Swiper",
-	imgSrc: "/images/technologies/swiper.webp",
- },
- {
-	name: "Chart.js",
-	imgSrc: "/images/technologies/chart.webp",
- },
- {
-	name: "Angular",
-	imgSrc: "/images/technologies/angular.webp",
- },
- {
-	name: "Gulp",
-	imgSrc: "/images/technologies/gulp.webp",
- },
+    name: "Vue.js",
+    imgSrc: "/images/technologies/vue.webp",
+  },
+  {
+    name: "Vuex",
+    imgSrc: "/images/technologies/vuex.webp",
+  },
+  {
+    name: "Vue Router",
+    imgSrc: "/images/technologies/vue-router.webp",
+  },
+  {
+    name: "Nuxt",
+    imgSrc: "/images/technologies/nuxt.webp",
+  },
+  {
+    name: "React",
+    imgSrc: "/images/technologies/react.webp",
+  },
+  {
+    name: "Redux",
+    imgSrc: "/images/technologies/redux.webp",
+  },
+  {
+    name: "React Router",
+    imgSrc: "/images/technologies/react-router.webp",
+  },
+  {
+    name: "Next",
+    imgSrc: "/images/technologies/next.webp",
+  },
+  {
+    name: "SWR",
+    imgSrc: "/images/technologies/swr.webp",
+  },
+  {
+    name: "Swiper",
+    imgSrc: "/images/technologies/swiper.webp",
+  },
+  {
+    name: "Chart.js",
+    imgSrc: "/images/technologies/chart.webp",
+  },
+  {
+    name: "Angular",
+    imgSrc: "/images/technologies/angular.webp",
+  },
+  {
+    name: "Gulp",
+    imgSrc: "/images/technologies/gulp.webp",
+  },
 ];
 
 export default function Technologies() {

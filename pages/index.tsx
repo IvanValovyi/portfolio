@@ -15,27 +15,32 @@ export default function Home() {
   const [theme, setTheme] = useState<Theme>(Theme.init);
 
   function loadTheme() {
-	'theme' in localStorage
-      ? localStorage.getItem("theme") === "dark"
+    "theme" in localStorage
+      ? localStorage.getItem("theme") === Theme.dark
         ? setTheme(Theme.dark)
         : setTheme(Theme.light)
-      : setTheme(Theme.dark);
+      : (setTheme(Theme.dark), localStorage.setItem("theme", Theme.dark));
   }
 
   useEffect(() => {
-	loadTheme();
+    loadTheme();
   }, []);
 
-  function toogleTheme() {
-    localStorage.theme === "dark"
-      ? (localStorage.setItem("theme", ""), setTheme(Theme.light))
-      : (localStorage.setItem("theme", "dark"), setTheme(Theme.dark));
+  function toogleTheme(): Theme {
+    if (localStorage.theme === Theme.dark) {
+      localStorage.setItem("theme", Theme.light);
+      setTheme(Theme.light);
+      return Theme.light;
+    }
+    localStorage.setItem("theme", Theme.dark);
+    setTheme(Theme.dark);
+    return Theme.dark;
   }
 
   return theme !== Theme.init ? (
     <div className={theme === Theme.dark ? "dark" : ""}>
       <div className="bg-primaryBg dark:bg-primaryBgDark">
-        <Header toogleTheme={toogleTheme} />
+        <Header theme={theme} toogleTheme={toogleTheme} />
         <AboutMe />
         <Technologies />
         <Projects />

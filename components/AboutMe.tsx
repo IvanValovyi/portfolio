@@ -9,8 +9,8 @@ export default function AboutMe() {
   const ivanValovyi = formatMessage({ id: "ivan-valovyi" });
   const juniorFrontendDev = formatMessage({ id: "junior-frontend-dev" });
 
-  const aboutMeParagraph_1 = formatMessage({ id: "about-me-paragraph_1" });
-  const aboutMeParagraph_2 = formatMessage({ id: "about-me-paragraph_2" });
+  const aboutMeParagraph1 = formatMessage({ id: "about-me-paragraph-1" });
+  const aboutMeParagraph2 = formatMessage({ id: "about-me-paragraph-2" });
 
   return (
     <div id={"about-me"} className="container py-[20px] lg:py-[25px] flex flex-col bg-secondaryBg dark:bg-secondaryBgDark">
@@ -36,10 +36,10 @@ export default function AboutMe() {
           </div>
         </div>
         <p className="mb-[16px] lg:mb-[20px] text-[16px] text-textMain dark:text-textMainDark">
-          {aboutMeParagraph_1}
+          {aboutMeParagraph1}
         </p>
         <p className="text-[16px] text-textMain dark:text-textMainDark">
-          {aboutMeParagraph_2}
+          {aboutMeParagraph2}
         </p>
       </div>
     </div>
