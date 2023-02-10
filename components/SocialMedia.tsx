@@ -9,15 +9,15 @@ interface socialMediaItem {
 
 const socialMedia: socialMediaItem[] = [
   {
-    link: "#",
+    link: "mailto:pan.ivan.17.0@gmail.com",
     icon: (className: string) => <Gmail className={className} />,
   },
   {
-    link: "#",
+    link: "https://t.me/ivan_valovyi_37",
     icon: (className: string) => <Telegram className={className} />,
   },
   {
-    link: "#",
+    link: "tel:+389065535629",
     icon: (className: string) => <Phone className={className} />,
   },
 ];
@@ -37,6 +37,7 @@ export default function SocialMedia({ id, className }: Props) {
         return (
           <Link
             href={el.link}
+            target={"_blank"}
             className="flex items-center justify-center w-[50px] h-[50px] rounded-[100%] bg-accentBg dark:bg-accentBgDark lg:hover:scale-[1.1] active:scale-[0.9] transition-all"
             key={i}
           >

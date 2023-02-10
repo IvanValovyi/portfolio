@@ -1,7 +1,6 @@
 import { Close, Menu } from "@/common/icons";
 import { LinkItem } from ".";
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import SocialMedia from "../SocialMedia";
 
 interface Props {
