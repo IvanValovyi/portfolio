@@ -24,11 +24,15 @@ const socialMedia: socialMediaItem[] = [
 
 interface Props {
   id?: string;
+  className?: string;
 }
 
-export default function SocialMedia({ id }: Props) {
+export default function SocialMedia({ id, className }: Props) {
   return (
-    <div id={id || ""} className={`flex items-center gap-[50px]`}>
+    <div
+      id={id || ""}
+      className={`flex items-center gap-[50px] ${className || ""}`}
+    >
       {socialMedia.map((el, i) => {
         return (
           <Link
