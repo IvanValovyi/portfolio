@@ -18,6 +18,8 @@ export default function ProjectsSlider({ projectsList }: Props) {
 
   const goToTheSite = formatMessage({ id: "go-to-the-site" });
 
+  const loadImage = formatMessage({ id: "load-image" });
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const [swiper, setSwiper] = useState<any>(null);
@@ -51,14 +53,25 @@ export default function ProjectsSlider({ projectsList }: Props) {
           return (
             <SwiperSlide key={i}>
               <div className="flex flex-col w-full bg-primaryBg dark:bg-primaryBgDark">
-                <Image
-                  src={project.imgSrc}
-                  alt={project.name}
-                  width={1920}
-                  height={1080}
-                  priority={i == 0}
-                  className="w-full h-[50vw] md:h-full"
-                />
+                <div
+                  className={"overflow-hidden relative h-[50vw] md:h-[450px]"}
+                  key={Math.random()}
+                >
+                  <Image
+                    src={project.imgSrc}
+                    alt={project.name}
+                    width={1920}
+                    height={1080}
+                    priority={i == 0}
+                    className="w-full h-full"
+                  />
+
+                  <div className="animate-pulse bg-[#d1cfcf] dark:bg-[black] h-full w-full flex items-center justify-center">
+                    <p className="text-textMain dark:text-textMainDark">
+                      {loadImage}...
+                    </p>
+                  </div>
+                </div>
                 <div className="flex flex-col sm:items-center sm:justify-between sm:flex-row p-[16px] md:p-[25px] border-t-[1px] border-t-borderSecondary dark:border-t-borderSecondaryDark">
                   <h3 className="text-[24px] sm:text-[32px] font-medium text-textMain dark:text-textMainDark">
                     {project.name}
