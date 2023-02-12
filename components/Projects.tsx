@@ -14,6 +14,11 @@ const projectsList: Project[] = [
     imgSrc: "/images/projects/travel.webp",
   },
   {
+    name: "Besnik",
+    link: "https://besnik-zeta.vercel.app/",
+    imgSrc: "/images/projects/besnik.webp",
+  },
+  {
     name: "Weather",
     link: "https://ivanvalovyi.github.io/weather/",
     imgSrc: "/images/projects/weather.webp",
