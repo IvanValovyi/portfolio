@@ -48,11 +48,12 @@ export default function Home() {
     <>
       <Head>
         <title>{title}</title>
-        <link rel="icon" type="image/x-icon" href="/images/ivan-valovyi.png" />
+        <link rel="shortcut icon" href="/images/favicon.ico" />
         <meta name="description" content={description} key="desc" />
         <meta property="og:title" content={title} />
+		  <meta property="og:site_name" content={title}/>
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={"/images/ivan-valovyi.png"} />
+		  <meta property="og:image" content="/images/favicon.ico" />
       </Head>
       <div className={theme === Theme.dark ? "dark" : ""}>
         <div className="bg-primaryBg dark:bg-primaryBgDark">
