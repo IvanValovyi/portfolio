@@ -45,7 +45,7 @@ export default function Home({ url }: { url: any }) {
     return Theme.dark;
   }
 
-  return theme !== Theme.init ? (
+  return (
     <>
       <Head>
         <title>{title}</title>
@@ -58,17 +58,19 @@ export default function Home({ url }: { url: any }) {
         <meta property="og:description" content={description} />
         <meta property="og:image" content="/images/favicon.ico" />
       </Head>
-      <div className={theme === Theme.dark ? "dark" : ""}>
-        <div className="bg-primaryBg dark:bg-primaryBgDark">
-          <Header theme={theme} toogleTheme={toogleTheme} />
-          <AboutMe />
-          <Technologies />
-          <Projects />
-          <Footer />
+      {theme !== Theme.init ? (
+        <div className={theme === Theme.dark ? "dark" : ""}>
+          <div className="bg-primaryBg dark:bg-primaryBgDark">
+            <Header theme={theme} toogleTheme={toogleTheme} />
+            <AboutMe />
+            <Technologies />
+            <Projects />
+            <Footer />
+          </div>
         </div>
-      </div>
+      ) : null}
     </>
-  ) : null;
+  );
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
