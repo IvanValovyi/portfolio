@@ -68,7 +68,7 @@ export default function Home({ url }: { url: any }) {
         />
         <meta
           property="og:image"
-          content="/images/ivan-valovyi.png"
+          content="https://ivan-valovyi.vercel.app/_next/image?url=%2Fimages%2Fivan-valovyi.png&w=64&q=75"
         />
       </Head>
       {theme !== Theme.init ? (
