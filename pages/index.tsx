@@ -48,23 +48,28 @@ export default function Home({ url }: { url: any }) {
   return (
     <>
       <Head>
-        <title>{title}</title>
-		  <link rel={"icon"} href="/images/ivan-valovyi.png" />
-        <meta name="title" content={description} />
+        <title>Ivan Valovyi</title>
+        <link rel={"icon"} href="/images/ivan-valovyi.png" />
+        <meta
+          name="title"
+          content={
+            "Frontend developer on React/Next with 7 months of work experience."
+          }
+        />
         <meta
           name="description"
-          content={description}
+          content={
+            "Junior frontend developer with 7 months of commercial experience."
+          }
         />
-
         <meta property="og:type" content="website" />
         <meta property="og:url" content={url} />
-        <meta
-          property="og:title"
-          content={title}
-        />
+        <meta property="og:title" content={"Ivan Valovyi"} />
         <meta
           property="og:description"
-          content={description}
+          content={
+            "Junior frontend developer with 7 months of commercial experience."
+          }
         />
         <meta
           property="og:image"
