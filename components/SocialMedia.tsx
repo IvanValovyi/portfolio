@@ -1,4 +1,4 @@
-import { Gmail, Phone, Telegram } from "@/common/icons";
+import { Gmail, Linkedin, Telegram } from "@/common/icons";
 import Link from "next/link";
 import { ReactNode } from "react";
 
@@ -17,8 +17,8 @@ const socialMedia: socialMediaItem[] = [
     icon: (className: string) => <Telegram className={className} />,
   },
   {
-    link: "tel:096 553 56 29",
-    icon: (className: string) => <Phone className={className} />,
+    link: "https://www.linkedin.com/in/ivan-valovyi-30a845215",
+    icon: (className: string) => <Linkedin className={className} />,
   },
 ];
 
