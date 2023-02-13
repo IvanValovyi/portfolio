@@ -53,7 +53,7 @@ export default function Home({ url }: { url: any }) {
         <meta
           name="title"
           content={
-            "Frontend developer on React/Next with 7 months of work experience."
+            "Ivan Valovyi"
           }
         />
         <meta
