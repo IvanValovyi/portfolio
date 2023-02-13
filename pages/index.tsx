@@ -49,14 +49,27 @@ export default function Home({ url }: { url: any }) {
     <>
       <Head>
         <title>{title}</title>
-        <link rel="shortcut icon" href="/images/ivan-valovyi.png" />
-        <meta name="description" content={description} key="desc" />
-        <meta property="og:url" content={url} />
+		  <link rel={"icon"} href="/images/ivan-valovyi.png" />
+        <meta name="title" content={description} />
+        <meta
+          name="description"
+          content={description}
+        />
+
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={title} />
-        <meta property="og:site_name" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content="/images/ivan-valovyi.png" />
+        <meta property="og:url" content={url} />
+        <meta
+          property="og:title"
+          content={title}
+        />
+        <meta
+          property="og:description"
+          content={description}
+        />
+        <meta
+          property="og:image"
+          content="/images/ivan-valovyi.png"
+        />
       </Head>
       {theme !== Theme.init ? (
         <div className={theme === Theme.dark ? "dark" : ""}>
