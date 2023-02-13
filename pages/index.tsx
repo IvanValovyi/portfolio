@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
 import Technologies from "@/components/Technologies";
 import Header from "@/components/header";
+import { GetServerSideProps } from "next";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
@@ -13,7 +14,7 @@ export enum Theme {
   dark = "dark",
 }
 
-export default function Home() {
+export default function Home({ url }: { url: any }) {
   const { formatMessage } = useIntl();
 
   const title = formatMessage({ id: "meta-title" });
@@ -50,10 +51,12 @@ export default function Home() {
         <title>{title}</title>
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <meta name="description" content={description} key="desc" />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
-		  <meta property="og:site_name" content={title}/>
+        <meta property="og:site_name" content={title} />
         <meta property="og:description" content={description} />
-		  <meta property="og:image" content="/images/favicon.ico" />
+        <meta property="og:image" content="/images/favicon.ico" />
       </Head>
       <div className={theme === Theme.dark ? "dark" : ""}>
         <div className="bg-primaryBg dark:bg-primaryBgDark">
@@ -67,3 +70,10 @@ export default function Home() {
     </>
   ) : null;
 }
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const url = `https://${req?.headers?.host}`;
+  return {
+    props: { url },
+  };
+};
