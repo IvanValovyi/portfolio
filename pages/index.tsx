@@ -3,7 +3,9 @@ import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
 import Technologies from "@/components/Technologies";
 import Header from "@/components/header";
+import Head from "next/head";
 import { useEffect, useState } from "react";
+import { useIntl } from "react-intl";
 
 export enum Theme {
   init = "init",
@@ -12,6 +14,11 @@ export enum Theme {
 }
 
 export default function Home() {
+  const { formatMessage } = useIntl();
+
+  const title = formatMessage({ id: "meta-title" });
+  const description = formatMessage({ id: "meta-description" });
+
   const [theme, setTheme] = useState<Theme>(Theme.init);
 
   function loadTheme() {
@@ -38,14 +45,24 @@ export default function Home() {
   }
 
   return theme !== Theme.init ? (
-    <div className={theme === Theme.dark ? "dark" : ""}>
-      <div className="bg-primaryBg dark:bg-primaryBgDark">
-        <Header theme={theme} toogleTheme={toogleTheme} />
-        <AboutMe />
-        <Technologies />
-        <Projects />
-        <Footer />
+    <>
+      <Head>
+        <title>{title}</title>
+        <link rel="icon" type="image/x-icon" href="/images/ivan-valovyi.png" />
+        <meta name="description" content={description} key="desc" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={"/images/ivan-valovyi.png"} />
+      </Head>
+      <div className={theme === Theme.dark ? "dark" : ""}>
+        <div className="bg-primaryBg dark:bg-primaryBgDark">
+          <Header theme={theme} toogleTheme={toogleTheme} />
+          <AboutMe />
+          <Technologies />
+          <Projects />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </>
   ) : null;
 }
