@@ -9,6 +9,7 @@ export default function AboutMe() {
   const ivanValovyi = formatMessage({ id: "ivan-valovyi" });
   const juniorFrontendDev = formatMessage({ id: "junior-frontend-dev" });
 
+  const aboutMeParagraph0 = formatMessage({ id: "about-me-paragraph-0" });
   const aboutMeParagraph1 = formatMessage({ id: "about-me-paragraph-1" });
   const aboutMeParagraph2 = formatMessage({ id: "about-me-paragraph-2" });
 
@@ -35,6 +36,9 @@ export default function AboutMe() {
             </p>
           </div>
         </div>
+        <p className="mb-[16px] lg:mb-[20px] text-[16px] text-textMain dark:text-textMainDark">
+          {aboutMeParagraph0}
+        </p>
         <p className="mb-[16px] lg:mb-[20px] text-[16px] text-textMain dark:text-textMainDark">
           {aboutMeParagraph1}
         </p>

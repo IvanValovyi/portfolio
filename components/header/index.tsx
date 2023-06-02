@@ -1,10 +1,8 @@
-import Link from "next/link";
 import { useIntl } from "react-intl";
 import ToogleLang from "./ToogleLang";
 import ToogleTheme from "./ToogleTheme";
 import NavMenu from "./NavMenu";
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/router";
 import { Theme } from "@/pages";
 
 export interface LinkItem {
@@ -60,6 +58,18 @@ export default function Header({ theme, toogleTheme }: Props) {
           activeEl?.classList.remove("scroll-animation");
         }, 1000));
   }
+
+  useEffect(() => {
+    const handleResize = () => {
+      headerRef?.current && setHeaderHeight(headerRef.current.clientHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     headerRef?.current && setHeaderHeight(headerRef.current.clientHeight);

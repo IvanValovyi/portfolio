@@ -5,8 +5,9 @@
 	"contacts":"Contacts",
 	"ivan-valovyi":"Ivan Valovyi",
 	"junior-frontend-dev":"Junior Frontend developer",
-	"about-me-paragraph-1":"Engaged in self-study of website development in JavaScript and Vue, after which he completed front-end development courses during which he got acquainted with the basic principles and approaches in website programming, learned more about Vue, Vue Router, Vuex and started working with Nuxt. After finishing the courses, he continued his independent study of front-end development - delved into the development of sites on Vue/Nuxt, began to study new technologies - in particular, React and Next.",
-	"about-me-paragraph-2":"I have 7 months of commercial work experience. At work, I worked mainly with React and Next, was engaged in creating the interface of sites and integrations with APIs. Also worked with Bootstrap, Tailwind, Swiper.js, Chart.js.",
+	"about-me-paragraph-0":"I completed front-end development courses, where I focused on learning JavaScript, Vue, VueX, Vue Router, and Nuxt. These courses provided me with foundational knowledge and a basic understanding of the main principles and approaches in website programming.",
+	"about-me-paragraph-1":"I have 12 months of commercial work experience, during which I specialized in website interface development and optimization. My tasks also involved integrating various APIs, primarily using React/Next and Vue/Nuxt.",
+	"about-me-paragraph-2":"Throughout my work, I gained experience with technologies such as Bootstrap, Tailwind, Swiper.js, Chart.js, Recharts, Slick, and Supercluster. Additionally, I worked on website integrations with Headless CMS and utilized Google Maps JS API and Google Recaptcha.",
 	"project-on-git-hub":"Project on GitHub",
 	"go-to-the-site":"Go to the site",
 	"load-image":"Image is loading"

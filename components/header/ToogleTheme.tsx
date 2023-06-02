@@ -11,6 +11,7 @@ interface Props {
 export default function ToogleTheme({ theme, toogleTheme, className }: Props) {
   const [showAnim, setShowAnim] = useState(false);
   const [icon, setIcon] = useState<ReactNode>(null);
+  const [isFirstLoad, setIsFirstLoad] = useState<boolean>(false);
 
   function toogleIcon() {
     theme === Theme.light
@@ -24,8 +25,12 @@ export default function ToogleTheme({ theme, toogleTheme, className }: Props) {
 
   useEffect(() => {
     setTimeout(() => {
-      toogleIcon();
-      setShowAnim(false);
+      if (!isFirstLoad) {
+        toogleIcon();
+        setShowAnim(false);
+      } else {
+        setIsFirstLoad(false);
+      }
     }, 150);
   }, [theme]);
 

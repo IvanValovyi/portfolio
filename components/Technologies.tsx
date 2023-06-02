@@ -67,6 +67,10 @@ const technologiesList: TechnologyItemData[] = [
     imgSrc: "/images/technologies/swiper.webp",
   },
   {
+    name: "Slick",
+    imgSrc: "/images/technologies/slick.webp",
+  },
+  {
     name: "Chart.js",
     imgSrc: "/images/technologies/chart.webp",
   },
@@ -77,6 +81,14 @@ const technologiesList: TechnologyItemData[] = [
   {
     name: "Gulp",
     imgSrc: "/images/technologies/gulp.webp",
+  },
+  {
+    name: "Google Maps",
+    imgSrc: "/images/technologies/maps.webp",
+  },
+  {
+    name: "Recaptcha",
+    imgSrc: "/images/technologies/recaptcha.webp",
   },
 ];
 
