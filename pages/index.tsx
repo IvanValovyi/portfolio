@@ -44,16 +44,11 @@ export default function Home({ url }: { url: any }) {
       <Head>
         <title>Ivan Valovyi</title>
         <link rel={"icon"} href="/images/ivan-valovyi.png" />
-        <meta
-          name="title"
-          content={
-            "Ivan Valovyi"
-          }
-        />
+        <meta name="title" content={"Ivan Valovyi"} />
         <meta
           name="description"
           content={
-            "Junior frontend developer with 7 months of commercial experience."
+            "Frontend developer with 12 months of commercial experience."
           }
         />
         <meta property="og:type" content="website" />
@@ -62,13 +57,10 @@ export default function Home({ url }: { url: any }) {
         <meta
           property="og:description"
           content={
-            "Junior frontend developer with 7 months of commercial experience."
+            "Frontend developer with 12 months of commercial experience."
           }
         />
-        <meta
-          property="og:image"
-          content="https://user-images.githubusercontent.com/82437628/218511491-57481db7-d07f-4e2b-8c4b-d5d1006b57ce.png"
-        />
+        <meta property="og:image" content="/site-preview.webp" />
       </Head>
       {theme !== Theme.init ? (
         <div className={theme === Theme.dark ? "dark" : ""}>
