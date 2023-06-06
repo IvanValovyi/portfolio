@@ -83,6 +83,10 @@ const technologiesList: TechnologyItemData[] = [
     imgSrc: "/images/technologies/gulp.webp",
   },
   {
+    name: "OpenLayers",
+    imgSrc: "/images/technologies/open-layers.webp",
+  },
+  {
     name: "Google Maps",
     imgSrc: "/images/technologies/maps.webp",
   },
