@@ -6,7 +6,6 @@ import Header from "@/components/header";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { useIntl } from "react-intl";
 
 export enum Theme {
   init = "init",
@@ -15,11 +14,6 @@ export enum Theme {
 }
 
 export default function Home({ url }: { url: any }) {
-  const { formatMessage } = useIntl();
-
-  const title = formatMessage({ id: "meta-title" });
-  const description = formatMessage({ id: "meta-description" });
-
   const [theme, setTheme] = useState<Theme>(Theme.init);
 
   function loadTheme() {

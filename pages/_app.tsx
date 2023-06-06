@@ -10,11 +10,6 @@ enum Locales {
   uk = "uk",
 }
 
-interface Langs {
-  en: object;
-  uk: object;
-}
-
 import { Inter, Roboto } from "@next/font/google";
 import { useEffect, useState } from "react";
 
