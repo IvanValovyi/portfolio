@@ -14,8 +14,8 @@ export default function NavMenu({ headerHeight, onLinkClick, links }: Props) {
 
   useEffect(() => {
     show
-      ? document.querySelector(".app-container")?.classList.add("overflow-hidden")
-      : document.querySelector(".app-container")?.classList.remove("overflow-hidden");
+      ? document.body.classList.add("overflow-hidden")
+      : document.body.classList.remove("overflow-hidden");
   }, [show]);
 
   return (
