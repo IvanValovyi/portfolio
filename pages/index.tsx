@@ -63,7 +63,7 @@ export default function Home({ url }: { url: any }) {
         <meta property="og:image" content="/site-preview.webp" />
       </Head>
       {theme !== Theme.init ? (
-        <div className={theme === Theme.dark ? "dark" : ""}>
+        <div className={`app-container ${theme === Theme.dark ? "dark" : ""}`}>
           <div className="bg-primaryBg dark:bg-primaryBgDark">
             <Header theme={theme} toogleTheme={toogleTheme} />
             <AboutMe />

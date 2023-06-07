@@ -12,11 +12,11 @@ interface Props {
 export default function NavMenu({ headerHeight, onLinkClick, links }: Props) {
   const [show, setShow] = useState(false);
 
-//   useEffect(() => {
-//     show
-//       ? document.body.classList.add("overflow-hidden")
-//       : document.body.classList.remove("overflow-hidden");
-//   }, [show]);
+  useEffect(() => {
+    show
+      ? document.querySelector(".app-container")?.classList.add("overflow-hidden")
+      : document.querySelector(".app-container")?.classList.remove("overflow-hidden");
+  }, [show]);
 
   return (
     <>
