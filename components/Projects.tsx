@@ -9,6 +9,11 @@ export interface Project {
 
 const projectsList: Project[] = [
   {
+    name: "Saviour Care",
+    link: "https://saviour-care-seven.vercel.app/",
+    imgSrc: "/images/projects/saviour-care.webp",
+  },
+  {
     name: "Travel",
     link: "https://travel-three-tawny.vercel.app/",
     imgSrc: "/images/projects/travel.webp",
