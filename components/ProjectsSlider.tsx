@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/effect-creative";
-import { EffectCreative, Navigation } from "swiper";
+import 'swiper/css/effect-coverflow';
+import { EffectCoverflow, Navigation } from "swiper";
 import { useIntl } from "react-intl";
 import Link from "next/link";
 import Image from "next/image";
@@ -28,17 +28,15 @@ export default function ProjectsSlider({ projectsList }: Props) {
     <div className="flext items-center justify-center flex-col w-full lg:w-[800px] mx-auto">
       <Swiper
         onSwiper={(swiper) => setSwiper(swiper)}
-        effect={"creative"}
-        creativeEffect={{
-          prev: {
-            shadow: true,
-            translate: [0, 0, -400],
-          },
-          next: {
-            translate: ["100%", 0, 0],
-          },
+        effect={'coverflow'}
+        modules={[EffectCoverflow, Navigation]}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
         }}
-        modules={[EffectCreative, Navigation]}
         navigation={{
           prevEl: "#prev-project-btn",
           nextEl: "#next-project-btn",
