@@ -1,6 +1,6 @@
 import AboutMe from "@/components/AboutMe";
 import Footer from "@/components/Footer";
-import Projects from "@/components/Projects";
+import Projects from "@/components/Projects/index";
 import Technologies from "@/components/Technologies";
 import Header from "@/components/header";
 import { GetServerSideProps } from "next";

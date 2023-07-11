@@ -10,5 +10,6 @@
 	"about-me-paragraph-2":"Throughout my work, I gained experience with technologies such as Bootstrap, Tailwind, Swiper.js, Chart.js, Recharts, Slick, and Supercluster. Additionally, I worked on website integrations with Headless CMS and utilized Google Maps JS API and Google Recaptcha.",
 	"project-on-git-hub":"Project on GitHub",
 	"go-to-the-site":"Go to the site",
-	"load-image":"Image is loading"
+	"load-image":"Image is loading",
+	"more-info":"More info"
 }

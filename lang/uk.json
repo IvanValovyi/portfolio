@@ -1,6 +1,6 @@
 {
 	"about-me":"Про мене",
-	"technologies":"Технолгії",
+	"technologies":"Технології",
 	"projects":"Проекти",
 	"contacts":"Контакти",
 	"ivan-valovyi":"Іван Валовий",
@@ -10,5 +10,6 @@
 	"about-me-paragraph-2":" У процесі роботи я отримав досвід з такими технологіями, як Bootstrap, Tailwind, Swiper.js, Chart.js, Recharts, Slick та Supercluster. Також я працював над інтеграцією веб-сайтів з Headless CMS і використовував Google Maps JS API та Google Recaptcha.",
 	"project-on-git-hub":"Проект на GitHub",
 	"go-to-the-site":"Перейти на сайт",
-	"load-image":"Зображення завантажується"
+	"load-image":"Зображення завантажується",
+	"more-info":"Інформація"
 }

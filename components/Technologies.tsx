@@ -27,6 +27,10 @@ const technologiesList: TechnologyItemData[] = [
     imgSrc: "/images/technologies/js.webp",
   },
   {
+    name: "TypeScript",
+    imgSrc: "/images/technologies/ts.webp",
+  },
+  {
     name: "Vue.js",
     imgSrc: "/images/technologies/vue.webp",
   },

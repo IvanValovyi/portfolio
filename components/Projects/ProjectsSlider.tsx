@@ -1,34 +1,42 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import 'swiper/css/effect-coverflow';
+import "swiper/css/effect-coverflow";
 import { EffectCoverflow, Navigation } from "swiper";
-import { useIntl } from "react-intl";
-import Link from "next/link";
-import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Arrow } from "@/common/icons";
-import { Project } from "./Projects";
+import { Project } from ".";
+import ProjectSlide from "./ProjectSlide";
 
 interface Props {
   projectsList: Project[];
 }
 
 export default function ProjectsSlider({ projectsList }: Props) {
-  const { formatMessage } = useIntl();
-
-  const goToTheSite = formatMessage({ id: "go-to-the-site" });
-
-  const loadImage = formatMessage({ id: "load-image" });
-
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const [swiper, setSwiper] = useState<any>(null);
+
+  const [md, setMd] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMd(window.matchMedia("(min-width: 768px)").matches);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    setMd(window.matchMedia("(min-width: 768px)").matches);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="flext items-center justify-center flex-col w-full lg:w-[800px] mx-auto">
       <Swiper
         onSwiper={(swiper) => setSwiper(swiper)}
-        effect={'coverflow'}
+        effect={"coverflow"}
         modules={[EffectCoverflow, Navigation]}
         coverflowEffect={{
           rotate: 50,
@@ -50,39 +58,7 @@ export default function ProjectsSlider({ projectsList }: Props) {
         {projectsList.map((project, i) => {
           return (
             <SwiperSlide key={i}>
-              <div className="flex flex-col w-full bg-primaryBg dark:bg-primaryBgDark">
-                <div
-                  className={"overflow-hidden relative h-[50vw] md:h-[450px]"}
-                  key={Math.random()}
-                >
-                  <Image
-                    src={project.imgSrc}
-                    alt={project.name}
-                    width={1920}
-                    height={1080}
-                    priority={i == 0}
-                    className="w-full h-full"
-                  />
-
-                  <div className="animate-pulse bg-[#d1cfcf] dark:bg-[black] h-full w-full flex items-center justify-center">
-                    <p className="text-textMain dark:text-textMainDark">
-                      {loadImage}...
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-col sm:items-center sm:justify-between sm:flex-row p-[16px] md:p-[25px] border-t-[1px] border-t-borderSecondary dark:border-t-borderSecondaryDark">
-                  <span className="text-[24px] sm:text-[32px] font-medium text-textMain dark:text-textMainDark">
-                    {project.name}
-                  </span>
-                  <Link
-                    href={project.link}
-                    target={"_blank"}
-                    className="flex items-center justify-center w-max mt-[16px] sm:mt-0 ml-auto sm:ml-0 py-[10px] px-[20px] rounded-[20px] text-[16px] sm:text-[18px] font-medium cursor-pointer bg-accentBg dark:bg-accentBgDark text-textAccent dark:text-textAccentDark lg:hover:text-textAccentDark dark:lg:hover:text-textAccent lg:hover:bg-primaryBg dark:lg:hover:bg-primaryBgDark lg:hover:border-[1px] lg:hover:border-accentBg dark:lg:hover:border-accentBgDark lg:hover:scale-[1.05] active:scale-[0.9] transition-all"
-                  >
-                    {goToTheSite}
-                  </Link>
-                </div>
-              </div>
+              <ProjectSlide project={project} isPriority={i == 0} md={md} index={i} />
             </SwiperSlide>
           );
         })}
