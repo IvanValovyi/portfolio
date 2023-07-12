@@ -39,7 +39,7 @@ export default function ProjectSlide({
   }
 
   return (
-    <div className="flex flex-col w-full bg-primaryBg dark:bg-primaryBgDark">
+    <div className="flex flex-col w-full bg-primaryBg dark:bg-primaryBgDark rounded-[10px]">
       <div
         className={
           "overflow-hidden relative h-max max-h-[50vh] md:h-[450px] md:max-h-[450px]"
@@ -67,7 +67,7 @@ export default function ProjectSlide({
         <span className="text-[22px] sm:text-[32px] font-medium text-textMain dark:text-textMainDark">
           {project.name}
         </span>
-        <div className="flex items-center justify-between gap-[12px] sm:gap-[24px] mt-[16px] flex-wrap">
+        <div className="flex items-center justify-between gap-[12px] sm:gap-[24px] mt-[16px] sm:mt-0 flex-wrap">
           <button
             className="flex items-center gap-[4px]"
             onClick={() => {
@@ -78,23 +78,23 @@ export default function ProjectSlide({
               {moreInfo}
             </span>
             <div
-              className={`flex items-center justify-center w-[12px] h-[12px] sm:w-[15px] sm:h-[15px] transition-default ${
+              className={`flex items-center justify-center w-[10px] h-[10px] min-[330px]:w-[12px] min-[330px]:h-[12px] sm:w-[15px] sm:h-[15px] transition-default ${
                 showInfoIconAnim
                   ? "opacity-[0.3] rotate-[45deg] scale-[0.7]"
                   : "opacity-[1] rotate-[0deg] scale-[1]"
               }`}
             >
               {showInfoIcon ? (
-                <Info className="w-[12px] h-[12px] sm:w-[15px] sm:h-[15px] text-textMain dark:text-textMainDark" />
+                <Info className="w-[10px] h-[10px] min-[330px]:w-[12px] min-[330px]:h-[12px] sm:w-[15px] sm:h-[15px] text-textMain dark:text-textMainDark" />
               ) : (
-                <Close className="w-[8px] h-[8px] sm:w-[10px] sm:h-[10px] text-textMain dark:text-textMainDark" />
+                <Close className="w-[6px] h-[6px] min-[330px]:w-[8px] min-[330px]:h-[8px] sm:h-[10px] text-textMain dark:text-textMainDark" />
               )}
             </div>
           </button>
           <Link
             href={project.link}
             target={"_blank"}
-            className="flex items-center justify-center w-max sm:mt-0 sm:ml-0 py-[8px] px-[16px] sm:py-[10px] sm:px-[20px] rounded-[20px] text-[14px] sm:text-[18px] font-medium cursor-pointer bg-accentBg dark:bg-accentBgDark text-textAccent dark:text-textAccentDark lg:border-[1px] lg:border-[transparent] lg:hover:text-textAccentDark dark:lg:hover:text-textAccent lg:hover:bg-primaryBg dark:lg:hover:bg-primaryBgDark lg:hover:border-accentBg dark:lg:hover:border-accentBgDark lg:hover:scale-[1.05] active:scale-[0.9] transition-all"
+            className="flex items-center justify-center w-max sm:mt-0 sm:ml-0 py-[6px] px-[12px] min-[330px]:py-[8px] min-[330px]:px-[16px] sm:py-[10px] sm:px-[20px] rounded-[20px] text-[14px] sm:text-[18px] font-medium cursor-pointer bg-accentBg dark:bg-accentBgDark text-textAccent dark:text-textAccentDark lg:border-[1px] lg:border-[transparent] lg:hover:text-textAccentDark dark:lg:hover:text-textAccent lg:hover:bg-primaryBg dark:lg:hover:bg-primaryBgDark lg:hover:border-accentBg dark:lg:hover:border-accentBgDark lg:hover:scale-[1.05] active:scale-[0.9] transition-all"
           >
             {goToTheSite}
           </Link>

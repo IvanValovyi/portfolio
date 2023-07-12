@@ -23,10 +23,10 @@ const projectsList: Project[] = [
         name: "Next",
         imgSrc: "/images/technologies/next.webp",
       },
-		{
-		  name: "TypeScript",
-		  imgSrc: "/images/technologies/ts.webp",
-		},
+      {
+        name: "TypeScript",
+        imgSrc: "/images/technologies/ts.webp",
+      },
       {
         name: "Tailwind",
         imgSrc: "/images/technologies/tailwind.webp",
@@ -48,10 +48,10 @@ const projectsList: Project[] = [
         name: "Next",
         imgSrc: "/images/technologies/next.webp",
       },
-		{
-		  name: "TypeScript",
-		  imgSrc: "/images/technologies/ts.webp",
-		},
+      {
+        name: "TypeScript",
+        imgSrc: "/images/technologies/ts.webp",
+      },
       {
         name: "Tailwind",
         imgSrc: "/images/technologies/tailwind.webp",
@@ -77,10 +77,10 @@ const projectsList: Project[] = [
         name: "Next",
         imgSrc: "/images/technologies/next.webp",
       },
-		{
-		  name: "TypeScript",
-		  imgSrc: "/images/technologies/ts.webp",
-		},
+      {
+        name: "TypeScript",
+        imgSrc: "/images/technologies/ts.webp",
+      },
       {
         name: "Tailwind",
         imgSrc: "/images/technologies/tailwind.webp",

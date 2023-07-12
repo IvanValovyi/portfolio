@@ -53,7 +53,7 @@ export default function ProjectsSlider({ projectsList }: Props) {
         onSlideChange={(e) => {
           setCurrentSlide(e.realIndex);
         }}
-        className="projectSwiper select-none rounded-[10px]"
+        className="projectSwiper select-none"
       >
         {projectsList.map((project, i) => {
           return (
