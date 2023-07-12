@@ -42,7 +42,7 @@ export default function ProjectSlide({
     <div className="flex flex-col w-full bg-primaryBg dark:bg-primaryBgDark rounded-[10px]">
       <div
         className={
-          "overflow-hidden relative h-max max-h-[50vh] md:h-[450px] md:max-h-[450px]"
+          "overflow-hidden relative h-[50vh] md:h-[450px]"
         }
         key={index}
       >
