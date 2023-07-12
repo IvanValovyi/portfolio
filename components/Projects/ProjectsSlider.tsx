@@ -25,7 +25,7 @@ export default function ProjectsSlider({ projectsList }: Props) {
 
     window.addEventListener("resize", handleResize);
 
-    setMd(window.matchMedia("(min-width: 768px)").matches);
+    handleResize();
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -58,7 +58,12 @@ export default function ProjectsSlider({ projectsList }: Props) {
         {projectsList.map((project, i) => {
           return (
             <SwiperSlide key={i}>
-              <ProjectSlide project={project} isPriority={i == 0} md={md} index={i} />
+              <ProjectSlide
+                project={project}
+                isPriority={i == 0}
+                md={md}
+                index={i}
+              />
             </SwiperSlide>
           );
         })}

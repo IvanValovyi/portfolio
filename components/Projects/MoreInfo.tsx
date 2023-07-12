@@ -64,7 +64,7 @@ export default function MoreInfo({ project, show, close, md }: Props) {
             <Link
               href={project.gitHubLink}
               target={"_blank"}
-              className="flex items-center rounded-[12px] border-textMain dark:border-textMainDark border-[1px] mr-[18px] md:mr-[24px] px-[12px] py-[6px]"
+              className="flex items-center rounded-[12px] border-textMain dark:border-textMainDark border-[1px] mr-[18px] md:mr-[24px] px-[12px] py-[6px] hover:bg-[#00000015] dark:hover:bg-[#0000006b] hover:rounded-[8px] active:bg-[#0000002a] dark:active:bg-[#000000a8] active:rounded-[10px]"
             >
               <Image
                 src={"/images/projects/icons/git-hub.webp"}
@@ -80,7 +80,7 @@ export default function MoreInfo({ project, show, close, md }: Props) {
             <Link
               href={project.figmaLink}
               target={"_blank"}
-              className="flex items-center rounded-[12px] border-textMain dark:border-textMainDark border-[1px] px-[12px] py-[6px]"
+              className="flex items-center rounded-[12px] border-textMain dark:border-textMainDark border-[1px] px-[12px] py-[6px] hover:bg-[#00000015] dark:hover:bg-[#0000006b] hover:rounded-[8px] active:bg-[#0000002a] dark:active:bg-[#000000a8] active:rounded-[10px]"
             >
               <Image
                 src={"/images/projects/icons/figma.webp"}
