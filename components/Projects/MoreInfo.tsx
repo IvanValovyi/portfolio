@@ -1,10 +1,7 @@
-import { Arrow, Close } from "@/common/icons";
+import { Close } from "@/common/icons";
 import { useIntl } from "react-intl";
-import { Swiper, SwiperSlide } from "swiper/react";
 import TechnologyItem from "../TechnologyItem";
 import { Project } from ".";
-import { useEffect, useRef, useState } from "react";
-import { Navigation } from "swiper";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,7 +20,7 @@ export default function MoreInfo({ project, show, close, md }: Props) {
 
   return (
     <div
-      className={`flex flex-col absolute z-10 bottom-0 left-0 w-full h-full bg-primaryBg dark:bg-primaryBgDark py-[16px] pl-[16px] pr-[4px] md:pr-[2px] md:py-[25px] md:pl-[25px] text-textMain dark:text-textMainDark more-info ${
+      className={`flex flex-col absolute z-10 bottom-0 left-0 w-full h-full bg-primaryBg dark:bg-primaryBgDark py-[16px] pl-[16px] pr-[4px] md:pr-[2px] md:py-[25px] md:pl-[25px] text-textMain dark:text-textMainDark more-info overflow-y-auto touch-pan-y ${
         show
           ? "cursor-default pointer-events-auto opacity-1"
           : "cursor-none pointer-events-none opacity-0"
