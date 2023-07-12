@@ -42,7 +42,7 @@ export default function ProjectSlide({
     <div className="flex flex-col w-full bg-primaryBg dark:bg-primaryBgDark rounded-[10px]">
       <div
         className={
-          "overflow-hidden relative h-[50vh] md:h-[450px]"
+          "overflow-hidden relative h-[calc(100vw - 40px)] sm:h-[510px] md:h-[450px]"
         }
         key={index}
       >
@@ -69,7 +69,7 @@ export default function ProjectSlide({
         </span>
         <div className="flex items-center justify-between gap-[12px] sm:gap-[24px] mt-[16px] sm:mt-0 flex-wrap">
           <button
-            className="flex items-center gap-[4px]"
+            className="flex items-center gap-[4px] transition-opacity duration-75 active:opacity-[0.8]"
             onClick={() => {
               handleInfoClick({ show: !showMore });
             }}

@@ -32,7 +32,7 @@ export default function MoreInfo({ project, show, close, md }: Props) {
       }
     >
       <div
-        className="absolute top-[16px] right-[16px] md:top-[18px] md:right-[18px] cursor-pointer transition opacity-[1] hover:opacity-[0.8] active:opacity-[0.7]"
+        className="absolute top-[16px] right-[16px] md:top-[18px] md:right-[18px] cursor-pointer transition-default opacity-[1] hover:opacity-[0.8] active:opacity-[0.7]"
         onClick={close}
       >
         <Close className="w-[18px] h-[18px] md:w-[20px] md:h-[20px]" />

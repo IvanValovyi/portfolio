@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/effect-coverflow";
-import { EffectCoverflow, Navigation } from "swiper";
+import { Navigation } from "swiper";
 import { useEffect, useState } from "react";
 import { Arrow } from "@/common/icons";
 import { Project } from ".";
@@ -36,15 +35,7 @@ export default function ProjectsSlider({ projectsList }: Props) {
     <div className="flext items-center justify-center flex-col w-full lg:w-[800px] mx-auto">
       <Swiper
         onSwiper={(swiper) => setSwiper(swiper)}
-        effect={"coverflow"}
-        modules={[EffectCoverflow, Navigation]}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
+        modules={[Navigation]}
         navigation={{
           prevEl: "#prev-project-btn",
           nextEl: "#next-project-btn",

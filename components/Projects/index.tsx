@@ -20,7 +20,7 @@ const projectsList: Project[] = [
     mobImgSrc: "/images/projects/saviour-care-mob.webp",
     gitHubLink: "https://github.com/IvanValovyi/saviour-care",
     figmaLink:
-      "https://www.figma.com/file/xVwNnGSegLZyOsLVF5FWJV/LandingPage-(Community)?type=design&t=EDpaBQRJKqapzsl1-6",
+      "https://www.figma.com/file/qVpK30bit4ah4SEFIwpp3z/Saviour-Care?type=design&t=9mO5xqQebJctCMMV-6",
     technologies: [
       {
         name: "Next",
