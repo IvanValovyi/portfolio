@@ -8,7 +8,7 @@ html {
 }
 
 body * {
-	transition: all 0.3s linear;
+	@apply transition-colors duration-300 ease-linear;
 	-webkit-tap-highlight-color: transparent;
 }
 
