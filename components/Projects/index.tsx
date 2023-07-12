@@ -8,6 +8,7 @@ export interface Project {
   imgSrc: string;
   mobImgSrc: string;
   gitHubLink: string;
+  figmaLink: string;
   technologies: TechnologyItemData[];
 }
 
@@ -18,6 +19,8 @@ const projectsList: Project[] = [
     imgSrc: "/images/projects/saviour-care.webp",
     mobImgSrc: "/images/projects/saviour-care-mob.webp",
     gitHubLink: "https://github.com/IvanValovyi/saviour-care",
+    figmaLink:
+      "https://www.figma.com/file/xVwNnGSegLZyOsLVF5FWJV/LandingPage-(Community)?type=design&t=EDpaBQRJKqapzsl1-6",
     technologies: [
       {
         name: "Next",
@@ -43,6 +46,8 @@ const projectsList: Project[] = [
     imgSrc: "/images/projects/travel.webp",
     mobImgSrc: "/images/projects/travel-mob.webp",
     gitHubLink: "https://github.com/TimaVol/travel",
+    figmaLink:
+      "https://www.figma.com/file/AK6N7RqW2EibPV3QDKlAql/Free-Travel-UI-Landing-Page-(Community)-(Copy)?type=design&t=EDpaBQRJKqapzsl1-6",
     technologies: [
       {
         name: "Next",
@@ -72,6 +77,8 @@ const projectsList: Project[] = [
     imgSrc: "/images/projects/besnik.webp",
     mobImgSrc: "/images/projects/besnik-mob.webp",
     gitHubLink: "https://github.com/IvanValovyi/besnik",
+    figmaLink:
+      "https://www.figma.com/file/UZCh58vq8MEzyQE95RLCsG/Besnik?type=design&t=EDpaBQRJKqapzsl1-6",
     technologies: [
       {
         name: "Next",

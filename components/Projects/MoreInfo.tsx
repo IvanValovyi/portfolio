@@ -68,7 +68,7 @@ export default function MoreInfo({ project, show, close, md }: Props) {
             >
               <Image
                 src={"/images/projects/icons/git-hub.webp"}
-                alt="Figma logo"
+                alt="GitHub logo"
                 width={md ? 28 : 24}
                 height={md ? 28 : 24}
                 className="mr-[4px] rounded-[100%]"
@@ -78,7 +78,7 @@ export default function MoreInfo({ project, show, close, md }: Props) {
               </span>
             </Link>
             <Link
-              href={project.gitHubLink}
+              href={project.figmaLink}
               target={"_blank"}
               className="flex items-center rounded-[12px] border-textMain dark:border-textMainDark border-[1px] px-[12px] py-[6px]"
             >
