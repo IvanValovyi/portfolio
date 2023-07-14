@@ -46,14 +46,17 @@ export default function ProjectSlide({
         }
         key={index}
       >
-        <Image
+        <div className="relative w-full h-full">
+		  <Image
           src={md ? project.imgSrc : project.mobImgSrc}
           alt={project.name}
           width={1920}
           height={1080}
           priority={isPriority}
-          className="w-full h-full object-cover"
+          className="absolute top-0 left-0 z-20 w-full h-full object-cover"
         />
+		  <div className="animate-pulse bg-primaryBgDark dark:bg-primaryBg h-full w-full"></div>
+		  </div>
         <MoreInfo
           project={project}
           show={showMore}
