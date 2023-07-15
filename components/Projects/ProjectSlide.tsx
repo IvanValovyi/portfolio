@@ -27,6 +27,7 @@ export default function ProjectSlide({
   const [showMore, setShowMore] = useState(false);
   const [showInfoIcon, setShowInfoIcon] = useState(true);
   const [showInfoIconAnim, setShowInfoIconAnim] = useState(false);
+  const [isImageLoded, setIsImageLoaded] = useState(false);
 
   function handleInfoClick({ show }: { show: boolean }) {
     setShowMore(show);
@@ -47,23 +48,28 @@ export default function ProjectSlide({
         key={index}
       >
         <div className="relative w-full h-full">
-		  <Image
-          src={md ? project.imgSrc : project.mobImgSrc}
-          alt={project.name}
-          width={1920}
-          height={1080}
-          priority={isPriority}
-          className="absolute top-0 left-0 z-20 w-full h-full object-cover"
-        />
-		  <div className="animate-pulse bg-primaryBgDark dark:bg-primaryBg h-full w-full"></div>
-		  </div>
+          <Image
+            src={md ? project.imgSrc : project.mobImgSrc}
+            alt={project.name}
+            width={1920}
+            height={1080}
+            priority={isPriority}
+            onLoadingComplete={() => {
+              setIsImageLoaded(true);
+            }}
+            className="absolute top-0 left-0 z-20 w-full h-full object-cover"
+          />
+          {!isImageLoded ? (
+            <div className="animate-pulse bg-primaryBgDark dark:bg-primaryBg h-full w-full relative z-0"></div>
+          ) : null}
+        </div>
         <MoreInfo
           project={project}
           show={showMore}
           close={() => {
             handleInfoClick({ show: false });
           }}
-			 md={md}
+          md={md}
         />
       </div>
       <div className="flex flex-col sm:items-center sm:justify-between sm:flex-row p-[16px] md:p-[25px] border-t-[1px] border-t-borderSecondary dark:border-t-borderSecondaryDark">
