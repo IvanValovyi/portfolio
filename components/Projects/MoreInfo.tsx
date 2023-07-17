@@ -9,10 +9,9 @@ interface Props {
   project: Project;
   show: boolean;
   close: () => void;
-  md: boolean;
 }
 
-export default function MoreInfo({ project, show, close, md }: Props) {
+export default function MoreInfo({ project, show, close }: Props) {
   const { formatMessage } = useIntl();
 
   const technologies = formatMessage({ id: "technologies" });
@@ -69,9 +68,9 @@ export default function MoreInfo({ project, show, close, md }: Props) {
               <Image
                 src={"/images/projects/icons/git-hub.webp"}
                 alt="GitHub logo"
-                width={md ? 28 : 24}
-                height={md ? 28 : 24}
-                className="mr-[4px] rounded-[100%]"
+                width={24}
+                height={24}
+                className="mr-[4px] rounded-[100%] w-[24px] md:w-[28px] h-[24px] md:h-[28px]"
               />
               <span className="text-[16px] md:text-[20px] text-textMain dark:text-textMainDark">
                 GitHub
@@ -85,9 +84,9 @@ export default function MoreInfo({ project, show, close, md }: Props) {
               <Image
                 src={"/images/projects/icons/figma.webp"}
                 alt="Figma logo"
-                width={md ? 28 : 24}
-                height={md ? 28 : 24}
-                className="mr-[4px]"
+                width={24}
+                height={24}
+                className="mr-[4px] w-[24px] md:w-[28px] h-[24px] md:h-[28px]"
               />
               <span className="text-[16px] md:text-[20px] text-textMain dark:text-textMainDark">
                 Figma

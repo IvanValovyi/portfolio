@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation } from "swiper";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Arrow } from "@/common/icons";
 import { Project } from ".";
 import ProjectSlide from "./ProjectSlide";
@@ -14,22 +14,6 @@ export default function ProjectsSlider({ projectsList }: Props) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const [swiper, setSwiper] = useState<any>(null);
-
-  const [md, setMd] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setMd(window.matchMedia("(min-width: 768px)").matches);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <div className="flext items-center justify-center flex-col w-full lg:w-[800px] mx-auto">
@@ -51,8 +35,6 @@ export default function ProjectsSlider({ projectsList }: Props) {
             <SwiperSlide key={i}>
               <ProjectSlide
                 project={project}
-                isPriority={i == 0}
-                md={md}
                 index={i}
               />
             </SwiperSlide>

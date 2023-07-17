@@ -3,22 +3,15 @@ import { Project } from ".";
 import { Close, Info } from "@/common/icons";
 import Link from "next/link";
 import { useIntl } from "react-intl";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import MoreInfo from "./MoreInfo";
 
 interface Props {
   project: Project;
-  isPriority: boolean;
-  md: boolean;
   index: number;
 }
 
-export default function ProjectSlide({
-  project,
-  isPriority,
-  md,
-  index,
-}: Props) {
+export default function ProjectSlide({ project, index }: Props) {
   const { formatMessage } = useIntl();
 
   const goToTheSite = formatMessage({ id: "go-to-the-site" });
@@ -49,15 +42,24 @@ export default function ProjectSlide({
       >
         <div className="relative w-full h-full">
           <Image
-            src={md ? project.imgSrc : project.mobImgSrc}
+            src={project.imgSrc}
             alt={project.name}
             width={1920}
             height={1080}
-            priority={isPriority}
             onLoadingComplete={() => {
               setIsImageLoaded(true);
             }}
-            className="absolute top-0 left-0 z-20 w-full h-full object-cover"
+            className="absolute top-0 left-0 z-20 w-full h-full object-cover hidden md:block"
+          />
+          <Image
+            src={project.mobImgSrc}
+            alt={project.name}
+            width={1920}
+            height={1080}
+            onLoadingComplete={() => {
+              setIsImageLoaded(true);
+            }}
+            className="absolute top-0 left-0 z-20 w-full h-full object-cover md:hidden"
           />
           {!isImageLoded ? (
             <div className="animate-pulse bg-primaryBgDark dark:bg-primaryBg h-full w-full relative z-0"></div>
@@ -69,7 +71,6 @@ export default function ProjectSlide({
           close={() => {
             handleInfoClick({ show: false });
           }}
-          md={md}
         />
       </div>
       <div className="flex flex-col sm:items-center sm:justify-between sm:flex-row p-[16px] md:p-[25px] border-t-[1px] border-t-borderSecondary dark:border-t-borderSecondaryDark">
