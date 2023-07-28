@@ -24,6 +24,7 @@ export default function ProjectsSlider({ projectsList }: Props) {
           prevEl: "#prev-project-btn",
           nextEl: "#next-project-btn",
         }}
+		  preventClicks={true}
         autoHeight={true}
         onSlideChange={(e) => {
           setCurrentSlide(e.realIndex);
