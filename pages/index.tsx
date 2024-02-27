@@ -44,6 +44,7 @@ export default function Home({ url }: { url: any }) {
       <Head>
         <title>Ivan Valovyi</title>
         <link rel={"icon"} href="/images/ivan-valovyi.png" />
+        <meta name="google-site-verification" content="KcsNCpHa63fZuw6T5hkGzcjqdqtLtNV0N-QbDagpgCQ" />
         <meta name="title" content={"Ivan Valovyi"} />
         <meta
           name="description"
