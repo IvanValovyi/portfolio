@@ -107,46 +107,56 @@ export default function Projects() {
   const projects = formatMessage({ id: "projects" });
 
   function blockZoom() {
-	document
-		 .querySelector('meta[name="viewport"]')
-		 ?.setAttribute(
-			  "content",
-			  "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-		 );
-}
+    document
+      .querySelector('meta[name="viewport"]')
+      ?.setAttribute(
+        "content",
+        "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      );
+  }
 
-function allowZoom() {
-	document
-		 .querySelector('meta[name="viewport"]')
-		 ?.setAttribute(
-			  "content",
-			  "width=device-width, initial-scale=1.0, user-scalable=yes"
-		 );
-}
+  function allowZoom() {
+    document
+      .querySelector('meta[name="viewport"]')
+      ?.setAttribute(
+        "content",
+        "width=device-width, initial-scale=1.0, user-scalable=yes"
+      );
+  }
 
-function initBlockZoom() {
-	const inputs = document.querySelectorAll(
-		 ".block-zoom:not(.block-zoom-inited)"
-	);
+  function initBlockZoom() {
+    const inputs = document.querySelectorAll(
+      ".block-zoom-wrapper:not(.block-zoom-inited)"
+    );
 
-	console.log("inputs: ", inputs);
+    console.log("inputs: ", inputs);
 
-	inputs.forEach((input) => {
-		 input.addEventListener("pointerdown", () => {
-			  blockZoom();
+    inputs.forEach((wrapper) => {
+      let timer: any = null;
+      const trigger: any = wrapper.querySelector(".block-zoom-trigger");
+      const input: any = wrapper.querySelector(".block-zoom-input");
 
-			  setTimeout(() => {
-					if (document.activeElement !== input) {
-						 allowZoom();
-					}
-			  }, 300);
-		 });
+      trigger.addEventListener("pointerdown", () => {
+        console.log("pointerdown");
 
-		 input.addEventListener("blur", allowZoom);
+        clearTimeout(timer);
+        blockZoom();
 
-		 input.classList.add("block-zoom-inited");
-	});
-}
+        timer = setTimeout(() => {
+          if (document.activeElement !== input) {
+            allowZoom();
+          }
+        }, 300);
+      });
+
+      input.addEventListener("blur", () => {
+        clearTimeout(timer);
+        allowZoom();
+      });
+
+      input.classList.add("block-zoom-inited");
+    });
+  }
 
   useEffect(() => {
     initBlockZoom();
@@ -155,17 +165,20 @@ function initBlockZoom() {
   return (
     <div
       id={"projects"}
-      className="container pt-[20px] pb-[70px] lg:pt-[25px] lg:pb-[100px] flex flex-col bg-secondaryBg dark:bg-secondaryBgDark"
+      className="container pt-[20px] pb-[70px] lg:pt-[25px] lg:pb-[100px] flex flex-col bg-secondaryBg dark:bg-secondaryBgDark block-zoom-wrapper"
     >
       <h1 className="text-[32px] font-bold family-roboto mb-[16px] lg:mb-[20px] text-textMain dark:text-textMainDark">
         {projects}
       </h1>
       <ProjectsSlider projectsList={projectsList} />
-      <input
-        type="text"
-        placeholder="Text..."
-        className="block-zoom text-[12px]"
-      />
+      <label className="block-zoom-trigger">
+        <p className="mb-[32px]">Some text</p>
+        <input
+          type="text"
+          placeholder="Text..."
+          className="text-[12px] block-zoom-input"
+        />
+      </label>
     </div>
   );
 }
