@@ -136,10 +136,7 @@ export default function Projects() {
 
       input.addEventListener("blur", () => {
         blockZoom();
-		
-        setTimeout(() => {
-          allowZoom();
-        }, 300);
+		  allowZoom();
       });
 
       input.classList.add("block-zoom-inited");
