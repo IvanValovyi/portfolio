@@ -134,6 +134,11 @@ export default function Projects() {
     inputs.forEach((wrapper) => {
       const input: any = wrapper.querySelector(".block-zoom-input");
 
+		input.addEventListener("focus", () => {
+			blockZoom();
+			allowZoom();
+		 });
+
       input.addEventListener("blur", () => {
         blockZoom();
 		  allowZoom();
