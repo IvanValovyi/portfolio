@@ -136,8 +136,8 @@ export default function Projects() {
       const trigger: any = wrapper.querySelector(".block-zoom-trigger");
       const input: any = wrapper.querySelector(".block-zoom-input");
 
-      trigger.addEventListener("pointerdown", () => {
-        console.log("pointerdown");
+      trigger.addEventListener("pointerover", () => {
+        console.log("pointerover");
 
         clearTimeout(timer);
         blockZoom();
@@ -147,6 +147,11 @@ export default function Projects() {
             allowZoom();
           }
         }, 300);
+      });
+
+      input.addEventListener("focus", () => {
+        clearTimeout(timer);
+        blockZoom();
       });
 
       input.addEventListener("blur", () => {
