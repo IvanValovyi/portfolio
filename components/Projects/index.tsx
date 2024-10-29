@@ -132,40 +132,23 @@ export default function Projects() {
     console.log("inputs: ", inputs);
 
     inputs.forEach((wrapper) => {
-      let timer: any = null;
-      const trigger: any = wrapper.querySelector(".block-zoom-trigger");
       const input: any = wrapper.querySelector(".block-zoom-input");
 
-      trigger.addEventListener("pointerover", () => {
-        console.log("pointerover");
-
-        clearTimeout(timer);
-        blockZoom();
-
-        timer = setTimeout(() => {
-          if (document.activeElement !== input) {
-            allowZoom();
-          }
-        }, 300);
-      });
-
-      input.addEventListener("focus", () => {
-        clearTimeout(timer);
-        blockZoom();
-      });
-
       input.addEventListener("blur", () => {
-        clearTimeout(timer);
-        allowZoom();
+        blockZoom();
+		
+        setTimeout(() => {
+          allowZoom();
+        }, 300);
       });
 
       input.classList.add("block-zoom-inited");
     });
   }
 
-//   useEffect(() => {
-//     initBlockZoom();
-//   }, []);
+  useEffect(() => {
+    initBlockZoom();
+  }, []);
 
   return (
     <div
