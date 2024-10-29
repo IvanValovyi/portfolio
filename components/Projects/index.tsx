@@ -120,7 +120,7 @@ export default function Projects() {
       .querySelector('meta[name="viewport"]')
       ?.setAttribute(
         "content",
-        "width=device-width, initial-scale=1.0, user-scalable=yes"
+        "width=device-width"
       );
   }
 
