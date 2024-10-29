@@ -163,9 +163,9 @@ export default function Projects() {
     });
   }
 
-  useEffect(() => {
-    initBlockZoom();
-  }, []);
+//   useEffect(() => {
+//     initBlockZoom();
+//   }, []);
 
   return (
     <div
@@ -181,7 +181,7 @@ export default function Projects() {
         <input
           type="text"
           placeholder="Text..."
-          className="text-[12px] block-zoom-input"
+          className="text-[12px] block-zoom-input touch-manipulation"
         />
       </label>
     </div>
