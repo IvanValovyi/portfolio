@@ -1,6 +1,7 @@
 import { useIntl } from "react-intl";
 import ProjectsSlider from "./ProjectsSlider";
 import { TechnologyItemData } from "../TechnologyItem";
+import { useEffect } from "react";
 
 export interface Project {
   name: string;
@@ -105,6 +106,43 @@ export default function Projects() {
 
   const projects = formatMessage({ id: "projects" });
 
+  function blockZoom() {
+	document
+		 .querySelector('meta[name="viewport"]')
+		 ?.setAttribute(
+			  "content",
+			  "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		 );
+}
+
+function allowZoom() {
+	document
+		 .querySelector('meta[name="viewport"]')
+		 ?.setAttribute(
+			  "content",
+			  "width=device-width, initial-scale=1.0, user-scalable=yes"
+		 );
+}
+
+function initBlockZoom() {
+	const inputs = document.querySelectorAll(
+		 ".block-zoom:not(.block-zoom-inited)"
+	);
+
+	console.log("inputs: ", inputs);
+
+	inputs.forEach((input) => {
+		 input.addEventListener("touchstart", blockZoom);
+		 input.addEventListener("touchend", allowZoom);
+
+		 input.classList.add("block-zoom-inited");
+	});
+}
+
+useEffect(() => {
+	initBlockZoom();
+}, []);
+
   return (
     <div
       id={"projects"}
@@ -114,6 +152,7 @@ export default function Projects() {
         {projects}
       </h1>
       <ProjectsSlider projectsList={projectsList} />
+		<input type="text" placeholder="Text..." className="block-zoom text-[12px]" />
     </div>
   );
 }
