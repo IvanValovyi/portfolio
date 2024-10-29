@@ -132,16 +132,25 @@ function initBlockZoom() {
 	console.log("inputs: ", inputs);
 
 	inputs.forEach((input) => {
-		 input.addEventListener("pointerdown", blockZoom);
+		 input.addEventListener("pointerdown", () => {
+			  blockZoom();
+
+			  setTimeout(() => {
+					if (document.activeElement !== input) {
+						 allowZoom();
+					}
+			  }, 300);
+		 });
+
 		 input.addEventListener("blur", allowZoom);
 
 		 input.classList.add("block-zoom-inited");
 	});
 }
 
-useEffect(() => {
-	initBlockZoom();
-}, []);
+  useEffect(() => {
+    initBlockZoom();
+  }, []);
 
   return (
     <div
@@ -152,7 +161,11 @@ useEffect(() => {
         {projects}
       </h1>
       <ProjectsSlider projectsList={projectsList} />
-		<input type="text" placeholder="Text..." className="block-zoom text-[12px]" />
+      <input
+        type="text"
+        placeholder="Text..."
+        className="block-zoom text-[12px]"
+      />
     </div>
   );
 }
