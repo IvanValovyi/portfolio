@@ -133,7 +133,7 @@ function initBlockZoom() {
 
 	inputs.forEach((input) => {
 		 input.addEventListener("touchstart", blockZoom);
-		 input.addEventListener("touchend", allowZoom);
+		 input.addEventListener("blur", allowZoom);
 
 		 input.classList.add("block-zoom-inited");
 	});
