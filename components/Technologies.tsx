@@ -43,6 +43,10 @@ const technologiesList: TechnologyItemData[] = [
     imgSrc: "/images/technologies/vue-router.webp",
   },
   {
+    name: "VeeValidate",
+    imgSrc: "/images/technologies/vee-validate.webp",
+  },
+  {
     name: "Nuxt",
     imgSrc: "/images/technologies/nuxt.webp",
   },
@@ -57,6 +61,10 @@ const technologiesList: TechnologyItemData[] = [
   {
     name: "React Router",
     imgSrc: "/images/technologies/react-router.webp",
+  },
+  {
+    name: "React Hook Form",
+    imgSrc: "/images/technologies/react-hook-form.webp",
   },
   {
     name: "Next",
@@ -79,12 +87,8 @@ const technologiesList: TechnologyItemData[] = [
     imgSrc: "/images/technologies/chart.webp",
   },
   {
-    name: "Angular",
-    imgSrc: "/images/technologies/angular.webp",
-  },
-  {
-    name: "Gulp",
-    imgSrc: "/images/technologies/gulp.webp",
+    name: "GSAP",
+    imgSrc: "/images/technologies/gsap.webp",
   },
   {
     name: "OpenLayers",
