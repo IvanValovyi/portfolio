@@ -43,7 +43,7 @@ export default function AboutMe() {
         <p className="mb-[16px] lg:mb-[20px] text-[16px] text-textMain dark:text-textMainDark">
           {aboutMeParagraph1}
         </p>
-        <p className="text-[16px] text-textMain dark:text-textMainDark">
+        <p className="mb-[16px] lg:mb-[20px] text-[16px] text-textMain dark:text-textMainDark">
           {aboutMeParagraph2}
         </p>
         <p className="text-[16px] text-textMain dark:text-textMainDark">
