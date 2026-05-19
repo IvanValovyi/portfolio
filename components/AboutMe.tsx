@@ -12,6 +12,7 @@ export default function AboutMe() {
   const aboutMeParagraph0 = formatMessage({ id: "about-me-paragraph-0" });
   const aboutMeParagraph1 = formatMessage({ id: "about-me-paragraph-1" });
   const aboutMeParagraph2 = formatMessage({ id: "about-me-paragraph-2" });
+  const aboutMeParagraph3 = formatMessage({ id: "about-me-paragraph-3" });
 
   return (
     <div id={"about-me"} className="container py-[20px] lg:py-[25px] flex flex-col bg-secondaryBg dark:bg-secondaryBgDark">
@@ -42,8 +43,11 @@ export default function AboutMe() {
         <p className="mb-[16px] lg:mb-[20px] text-[16px] text-textMain dark:text-textMainDark">
           {aboutMeParagraph1}
         </p>
-        <p className="text-[16px] text-textMain dark:text-textMainDark">
+        <p className="mb-[16px] lg:mb-[20px] text-[16px] text-textMain dark:text-textMainDark">
           {aboutMeParagraph2}
+        </p>
+        <p className="text-[16px] text-textMain dark:text-textMainDark">
+          {aboutMeParagraph3}
         </p>
       </div>
     </div>
