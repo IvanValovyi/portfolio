@@ -23,6 +23,22 @@ const technologiesList: TechnologyItemData[] = [
     imgSrc: "/images/technologies/tailwind.webp",
   },
   {
+    name: "Swiper",
+    imgSrc: "/images/technologies/swiper.webp",
+  },
+  {
+    name: "Slick",
+    imgSrc: "/images/technologies/slick.webp",
+  },
+  {
+    name: "Chart.js",
+    imgSrc: "/images/technologies/chart.webp",
+  },
+  {
+    name: "GSAP",
+    imgSrc: "/images/technologies/gsap.webp",
+  },
+  {
     name: "JavaScript",
     imgSrc: "/images/technologies/js.webp",
   },
@@ -39,8 +55,8 @@ const technologiesList: TechnologyItemData[] = [
     imgSrc: "/images/technologies/vuex.webp",
   },
   {
-    name: "Vue Router",
-    imgSrc: "/images/technologies/vue-router.webp",
+    name: "Pinia",
+    imgSrc: "/images/technologies/pinia.webp",
   },
   {
     name: "VeeValidate",
@@ -59,8 +75,8 @@ const technologiesList: TechnologyItemData[] = [
     imgSrc: "/images/technologies/redux.webp",
   },
   {
-    name: "React Router",
-    imgSrc: "/images/technologies/react-router.webp",
+    name: "Zustand",
+    imgSrc: "/images/technologies/zustand.webp",
   },
   {
     name: "React Hook Form",
@@ -75,32 +91,20 @@ const technologiesList: TechnologyItemData[] = [
     imgSrc: "/images/technologies/swr.webp",
   },
   {
-    name: "Swiper",
-    imgSrc: "/images/technologies/swiper.webp",
+    name: "GraphQL",
+    imgSrc: "/images/technologies/graph-ql.webp",
   },
   {
-    name: "Slick",
-    imgSrc: "/images/technologies/slick.webp",
+    name: "WebSockets",
+    imgSrc: "/images/technologies/web-sockets.webp",
   },
   {
-    name: "Chart.js",
-    imgSrc: "/images/technologies/chart.webp",
+    name: "Node.js",
+    imgSrc: "/images/technologies/node-js.webp",
   },
   {
-    name: "GSAP",
-    imgSrc: "/images/technologies/gsap.webp",
-  },
-  {
-    name: "OpenLayers",
-    imgSrc: "/images/technologies/open-layers.webp",
-  },
-  {
-    name: "Google Maps",
-    imgSrc: "/images/technologies/maps.webp",
-  },
-  {
-    name: "Recaptcha",
-    imgSrc: "/images/technologies/recaptcha.webp",
+    name: "Fastify",
+    imgSrc: "/images/technologies/fastify.webp",
   },
 ];
 

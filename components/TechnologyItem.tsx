@@ -15,7 +15,7 @@ export default function TechnologyItem({
 }: TechnologyItemData) {
   return (
     <div
-      className={`flex items-center w-max select-none gap-[10px] rounded-[20px] border-[1px] border-borderDefault dark:border-borderDefaultDark bg-[white] dark:bg-[black] ${
+      className={`flex items-center w-max gap-[10px] rounded-[20px] border-[1px] border-borderDefault dark:border-borderDefaultDark bg-[white] dark:bg-[black] ${
         className || ""
       } ${isSmall ? "py-[8px] px-[12px]" : "p-[14px]"}`}
     >
